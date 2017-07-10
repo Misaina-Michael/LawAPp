@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <!--    	<property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.max_statements">50</property>
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.timeout">1800</property>
+        <property name="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</property>-->
+    <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+    <property name="hibernate.connection.password">smrhrsuperuser</property>
+    
+    <property name="hibernate.connection.url">jdbc:postgresql://192.168.69.63:5432/lawapp</property>
+    <!--<property name="hibernate.connection.url">jdbc:postgresql://10.8.100.82:5432/11nov</property>-->
+    <!--<property name="hibernate.connection.url">jdbc:postgresql://192.168.10.196:5432/11nov</property>-->
+    <!--<property name="hibernate.connection.url">jdbc:postgresql://192.168.69.72:5432/smrhr</property>-->
+    
+    
+    <property name="hibernate.connection.username">postgres</property>
+    <!--huhu-->
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <property name="hibernate.show_sql">false</property>
+    <!-- List of mapping files -->
+    <mapping resource="mapping/Contact.hbm.xml"/>
+    <mapping resource="mapping/ClientLibelle.hbm.xml"/>
+    <mapping resource="mapping/Client.hbm.xml"/>
+    <mapping resource="mapping/Titre.hbm.xml"/>
+    <mapping resource="mapping/TypeFacturationClient.hbm.xml"/>
+    <mapping resource="mapping/TypeFacturationDossier.hbm.xml"/>
+    <mapping resource="mapping/TypeFacture.hbm.xml"/>
+    <mapping resource="mapping/ModeFacturation.hbm.xml"/>
+    <mapping resource="mapping/Dossier.hbm.xml"/>
+    <mapping resource="mapping/DossierLibelle.hbm.xml"/>
+    <mapping resource="mapping/Nature.hbm.xml"/>
+    <mapping resource="mapping/Juridiction.hbm.xml"/>
+    <mapping resource="mapping/TypeUser.hbm.xml"/>
+    <mapping resource="mapping/Fonction.hbm.xml"/>
+    <mapping resource="mapping/Intervenant.hbm.xml"/>
+    <mapping resource="mapping/TypeTarifEvt.hbm.xml"/>
+    <mapping resource="mapping/EvenementDossier.hbm.xml"/>
+    <mapping resource="mapping/TarifIntervenant.hbm.xml"/>
+    <mapping resource="mapping/EvtTarif.hbm.xml"/>
+    <mapping resource="mapping/EvtTarifLibelle.hbm.xml"/>
+    <mapping resource="mapping/TarifIntervLibelle.hbm.xml"/>
+    <mapping resource="mapping/EvtDossierLibelle.hbm.xml"/>
+    <mapping resource="mapping/TypeProcedure.hbm.xml"/>
+    <mapping resource="mapping/Planning.hbm.xml"/>
+    <mapping resource="mapping/ProcedureLibelle.hbm.xml"/>
+    <mapping resource="mapping/PlanningLibelle.hbm.xml"/>
+    <mapping resource="mapping/IntervenantDossier.hbm.xml"/>
+    <mapping resource="mapping/IntervenantDossierLibelle.hbm.xml"/>
+    <mapping resource="mapping/TarifNormaux.hbm.xml"/>
+    <mapping resource="mapping/MtTypeTarif.hbm.xml"/>
+    <mapping resource="mapping/MtTypeTarifLib.hbm.xml"/>
+    <mapping resource="mapping/ContactClient.hbm.xml"/>
+    <mapping resource="mapping/ContactClientLibelle.hbm.xml"/>
+    <mapping resource="mapping/ContactDossierLibelle.hbm.xml"/>
+    <mapping resource="mapping/ContactDossier.hbm.xml"/>
+    <mapping resource="mapping/Facture.hbm.xml"/>
+    <mapping resource="mapping/FactureLibelle.hbm.xml"/>
+    <mapping resource="mapping/FactureEvtLibelle.hbm.xml"/>
+    <mapping resource="mapping/FactureEvt.hbm.xml"/>
+    <mapping resource="mapping/TarifFactIntervttarLibelle.hbm.xml"/>
+    <mapping resource="mapping/TarifFactIntervttar.hbm.xml"/>
+    <mapping resource="mapping/TarifFactInterv.hbm.xml"/>
+    <mapping resource="mapping/TarifFacture.hbm.xml"/>
+    <mapping resource="mapping/TempsTravail.hbm.xml"/>
+    <mapping resource="mapping/FonctionTarifEvt.hbm.xml"/>
+    <mapping resource="mapping/FonctionTarifEvtLibelle.hbm.xml"/>
+    <mapping resource="mapping/IntervenantFonctionLibelle.hbm.xml"/>
+    <mapping resource="mapping/FacturationDossierLibelle.hbm.xml"/>
+    <mapping resource="mapping/FacturationClientLibelle.hbm.xml"/>
+    <mapping resource="mapping/ParametreRepertoire.hbm.xml"/>
+    <mapping resource="mapping/TarifSpecial.hbm.xml"/>
+    <mapping resource="mapping/DefaultDir.hbm.xml"/>
+    <mapping resource="mapping/TarifSpeciaux.hbm.xml"/>
+    <mapping resource="mapping/TarifsNS.hbm.xml"/>
+    <!-- End of mapping files -->
+  </session-factory>
+</hibernate-configuration>
