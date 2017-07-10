@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="modeles.planning.ProcedureLibelle" table="procedurelibelle" lazy="false">
+	    <id name="id" column="idprocedure" type="integer">
+                
+                <generator class="sequence">  
+                    <param name="sequence">planing_idplanning_seq</param>  
+                </generator>  
+            </id>
+	    <property name="idDossier" column="iddossier"/>
+            <property name="idJur" column="idjur"/>
+       <property name="idTypeProcedure" column="idtypeprocedure"/>
+            <property name="notes" column="notes"/>
+            <property name="dateProcedure" column="dateprocedure"/>
+         
+            <property name="planifiee" column="planifiee"/>
+            <property name="numeroDossier" column="numerodossier"/>
+            <property name="juridiction" column="juridiction"/>
+            <property name="libProcedure" column="libprocedure"/>
+            
+
+	</class>
+</hibernate-mapping>

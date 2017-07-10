@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="modeles.intervenants.Intervenant" table="intervenant" lazy="false">
+	    <id name="id" column="idintervenant" type="integer">
+                
+                <generator class="sequence">  
+                    <param name="sequence">intervenant_idintervenant_seq</param>  
+                </generator>  
+            </id>
+	    <property name="nom" column="nom"/>
+            <property name="prenom" column="prenom"/>
+            <property name="gestionnaire" column="gestionnaire"/>
+            <property name="idFonction" column="idfonction"/>
+            <property name="idTypeUser" column="idtypeuser"/>
+            <property name="code" column="code"/>
+            <property name="demandeur" column="demandeur"/>
+            <property name="comptetiers" column="comptetiers"/>
+            <property name="adresse" column="adresse"/>
+            <property name="pays" column="pays"/>
+            <property name="codepostal" column="codepostal"/>
+            <property name="ville" column="ville"/>
+            <property name="bureau" column="bureau"/>
+            <property name="domicile" column="domicile"/>
+            <property name="fax" column="fax"/>
+            <property name="email" column="email"/>
+            <property name="mobile" column="mobile"/>
+            <property name="web" column="web"/>
+            <property name="toque" column="toque"/>
+            <property name="seuilbas" column="seuilbas"/>
+            <property name="seuilintermediaire" column="seuilintermediaire"/>
+            <property name="seuilhaut" column="seuilhaut"/>
+            <property name="seuiljournalier" column="seuiljournalier"/>
+            <property name="seuilhoraire" column="seuilhoraire"/>
+            <property name="titulaire" column="titulaire"/>
+            <property name="rib" column="rib"/>
+            <property name="domiciliation" column="domiciliation"/>
+            <property name="iban" column="iban"/>
+            <property name="bic" column="bic"/>
+            <property name="commentaire" column="commentaire"/>
+            <property name="login" column="login"/>
+            <property name="mdp" column="mdp"/>
+            <property name="intervenant" column="intervenant"/>
+            <property name="contact" column="contact"/>
+            <property name="client" column="client"/>
+            <property name="dossier" column="dossier"/>
+             <property name="factures" column="factures"/>
+            <property name="planning" column="planning"/>
+            <property name="feuilledeTemps" column="feuilledetemps"/>
+            <property name="utilisateur" column="utilisateur"/>
+	    
+            
+            
+            
+
+	</class>
+</hibernate-mapping>

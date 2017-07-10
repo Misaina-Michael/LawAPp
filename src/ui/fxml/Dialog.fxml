@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="panneau" prefHeight="460.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.fxml.DialogController">
+   <children>
+      <Pane fx:id="principale" layoutX="-1.0" layoutY="51.0" prefHeight="357.0" prefWidth="658.0">
+         <children>
+            <Pane fx:id="bas" layoutY="362.0" prefHeight="46.0" prefWidth="658.0" />
+         </children>
+      </Pane>
+      <Label fx:id="titre" layoutX="14.0" layoutY="20.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

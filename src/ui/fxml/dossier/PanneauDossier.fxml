@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="676.0" prefWidth="1155.0" style="-fx-background-color: #DD423D;" stylesheets="@../../styles/buttonStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.dossier.PanneauDossierController">
+   <children>
+      <Label fx:id="nomDossier" layoutX="96.0" layoutY="59.0" text="Dossier" textFill="WHITE">
+         <font>
+            <Font size="12.0" />
+         </font></Label>
+      <Button fx:id="fiche" contentDisplay="TOP" layoutX="351.0" layoutY="14.0" mnemonicParsing="false" onAction="#viewFiche" prefHeight="68.0" prefWidth="88.0" style="-fx-background-color: ;" styleClass="default" text="Fiche" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icones/white/Info%20Filled.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="facturation" contentDisplay="TOP" layoutX="452.0" layoutY="14.0" mnemonicParsing="false" onAction="#viewFacturation" prefHeight="68.0" prefWidth="88.0" styleClass="default" text="Facturation" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icones/white/POS%20Terminal%20Filled.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Pane fx:id="panPrincipal" layoutX="-6.0" layoutY="99.0" prefHeight="577.0" prefWidth="1155.0" style="-fx-background-color: #f5f6f7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="99.0" />
+      <Button fx:id="evenementButton" contentDisplay="TOP" layoutX="551.0" layoutY="14.0" mnemonicParsing="false" onAction="#viewEvenement" prefHeight="68.0" prefWidth="88.0" styleClass="default" text="Evénements" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icones/white/To%20Do%20Filled.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="procedureButton" alignment="CENTER" contentDisplay="TOP" layoutX="650.0" layoutY="14.0" mnemonicParsing="false" onAction="#viewProcedure" prefHeight="68.0" prefWidth="88.0" style="-fx-background-color: ;" styleClass="default" text="Procédures" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icones/white/Checklist%20Filled-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="planningButton" alignment="CENTER" contentDisplay="TOP" layoutX="749.0" layoutY="14.0" mnemonicParsing="false" onAction="#viewPlanning" prefHeight="68.0" prefWidth="88.0" style="-fx-background-color: ;" styleClass="default" text="Planning" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icones/white/Calendar%20Filled.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="interlButton" contentDisplay="TOP" layoutX="848.0" layoutY="14.0" mnemonicParsing="false" onAction="#viewInterlocuteurs" prefHeight="68.0" prefWidth="88.0" style="-fx-background-color: ;" styleClass="default" text="Interlocuteurs" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icones/white/Conference%20Call%20Filled.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="docButton" alignment="CENTER" contentDisplay="TOP" layoutX="947.0" layoutY="14.0" mnemonicParsing="false" onAction="#viewDocuments" prefHeight="68.0" prefWidth="88.0" style="-fx-background-color: ;" styleClass="default" text="Documents" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icones/white/File%20Filled.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <ImageView fitHeight="68.0" fitWidth="88.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/Dossier%20Filled-100.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="96.0" layoutY="14.0" text="Dossier" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="faitsButton" alignment="CENTER" contentDisplay="TOP" layoutX="1047.0" layoutY="14.0" mnemonicParsing="false" onAction="#faits" prefHeight="68.0" prefWidth="88.0" style="-fx-background-color: ;" styleClass="default" text="Faits" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icones/white/faits.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

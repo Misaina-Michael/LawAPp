@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1155.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="ui.controllers.dossier.FaitsController">
+   <children>
+      <TextArea fx:id="faits" layoutX="7.0" layoutY="32.0" prefHeight="479.0" prefWidth="1140.0" />
+      <Button layoutX="1047.0" layoutY="527.0" mnemonicParsing="false" onAction="#valider" prefHeight="25.0" prefWidth="100.0" text="Valider" />
+   </children>
+</AnchorPane>

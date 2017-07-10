@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="475.0" style="-fx-background-color: white;" stylesheets="@../../styles/formulaire.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.client.FacturationClientController">
+   <children>
+      <GridPane hgap="10.0" layoutY="62.0" maxWidth="-Infinity">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="150.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="241.0" minWidth="10.0" prefWidth="144.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="277.0" minWidth="10.0" prefWidth="219.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Type par défaut" />
+            <Label text="Taux de TVA" GridPane.rowIndex="1" />
+            <Label text="Mode de facturation" GridPane.rowIndex="2" />
+            <Label text="Périodicité" GridPane.rowIndex="3" />
+            <Label text="Echéance" GridPane.rowIndex="4" />
+            <Label text="Langue" GridPane.rowIndex="5" />
+            <Label text="Compte comptable" GridPane.rowIndex="6" />
+            <Label text="Compte tiers" GridPane.rowIndex="7" />
+            <Label text="Catégorie comptable" GridPane.rowIndex="8" />
+            <ComboBox fx:id="typeParDefaut" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="137.0" GridPane.columnIndex="1" />
+            <TextField fx:id="tva" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="137.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="periodicite" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="137.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="echeance" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="137.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="compteTiers" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="137.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="compteComptable" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="137.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="categorieComptable" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="137.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <ComboBox fx:id="langue" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="137.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <ComboBox fx:id="modeFacturation" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="137.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="jours" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label text="\%" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="valueModeFact" maxWidth="-Infinity" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label fx:id="uniteValueMode" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="16.0" prefWidth="78.0" text="\%" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Button fx:id="validButton" layoutX="191.0" layoutY="349.0" mnemonicParsing="false" onAction="#valider" prefHeight="24.0" prefWidth="94.0" styleClass="button-ajouter" text="Valider" />
+      <Label layoutX="40.0" layoutY="14.0" text="Facturation du client" textFill="#3699c7">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

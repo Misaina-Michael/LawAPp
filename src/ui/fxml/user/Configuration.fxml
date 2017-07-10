@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="386.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.user.ConfigurationController">
+   <children>
+      <ListView fx:id="listViewUsers" layoutX="14.0" layoutY="6.0" prefHeight="373.0" prefWidth="194.0" />
+      <TabPane layoutX="211.0" layoutY="8.0" prefHeight="373.0" prefWidth="533.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Fiche">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="279.0" prefWidth="510.0">
+                     <children>
+                        <Pane fx:id="ficheUserPane" layoutX="5.0" layoutY="1.0" prefHeight="318.0" prefWidth="521.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Droits">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="269.0" prefWidth="504.0">
+                     <children>
+                        <Pane fx:id="droitUserPane" layoutX="1.0" layoutY="1.0" prefHeight="317.0" prefWidth="528.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

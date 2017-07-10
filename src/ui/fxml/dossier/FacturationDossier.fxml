@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1155.0" stylesheets="@../../styles/formulaire.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.dossier.FacturationDossierController">
+   <children>
+      <Pane layoutX="6.0" layoutY="5.0" prefHeight="565.0" prefWidth="596.0" style="-fx-background-color: white; -fx-background-radius: 2px;">
+         <children>
+            <Label layoutX="226.0" layoutY="14.0" text="Mode de facturation" textFill="#dd423d">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <GridPane hgap="10.0" layoutX="57.0" layoutY="99.0" maxWidth="-Infinity" prefHeight="270.0" prefWidth="483.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="150.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="241.0" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="277.0" minWidth="10.0" prefWidth="163.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Type par défaut" />
+                  <Label text="Taux de TVA" GridPane.rowIndex="1" />
+                  <Label text="Mode de facturation" GridPane.rowIndex="2" />
+                  <Label text="Périodicité" GridPane.rowIndex="3" />
+                  <Label text="Echéance" GridPane.rowIndex="4" />
+                  <Label text="Langue" GridPane.rowIndex="5" />
+                  <Label text="Compte comptable" GridPane.rowIndex="6" />
+                  <Label text="Compte tiers" GridPane.rowIndex="7" />
+                  <Label text="Catégorie comptable" GridPane.rowIndex="8" />
+                  <ComboBox fx:id="typeParDefaut" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="180.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="tva" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="82.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="periodicite" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="echeance" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="82.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="compteTiers" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <TextField fx:id="compteComptable" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <TextField fx:id="categorieComptable" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <ComboBox fx:id="langue" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <ComboBox fx:id="modeFacturation" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="jours" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Label text="\%" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="valueModeFact" maxWidth="-Infinity" prefHeight="24.0" prefWidth="66.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label fx:id="uniteValueMode" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="16.0" prefWidth="69.0" text="\%" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <Button fx:id="validButton" layoutX="201.0" layoutY="407.0" mnemonicParsing="false" onAction="#valider" prefWidth="100.0" text="Valider">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/icones/blue/Checked.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="607.0" layoutY="5.0" prefHeight="565.0" prefWidth="542.0" style="-fx-background-color: white; -fx-background-radius: 2px;">
+         <children>
+            <Button layoutX="31.0" layoutY="407.0" mnemonicParsing="false" onAction="#addAdressFact" prefHeight="37.0" prefWidth="130.0" text="Lier un contact">
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/icones/red/Business%20Contact%20Filled.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="192.0" layoutY="14.0" text="Adresse de facturation" textFill="#dd423d">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Text fx:id="contactAdresseFact" layoutX="29.0" layoutY="111.0" lineSpacing="10.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

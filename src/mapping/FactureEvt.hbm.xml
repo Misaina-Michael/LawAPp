@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="modeles.facturation.FactureEvt" table="factureevt" lazy="false">
+	    <id name="id" column="idfactureevt" type="integer">
+                
+                <generator class="sequence">  
+                    <param name="sequence">factureevt_idfactureevt_seq</param>  
+                </generator>  
+            </id>
+	    <property name="idFacture" column="idfacture"/>
+	    <property name="idEvtDossier" column="idevtdossier"/>
+	    
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import jfxtras.labs.scene.control.window.*?>
+<?import jfxtras.labs.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="ficheContactform" prefHeight="600.0" prefWidth="393.0" style="-fx-border-color: inherit; -fx-background-color: white;" stylesheets="@../../styles/formulaire.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.contact.FicheContactController">
+   <children>
+      <CheckBox fx:id="enSommeil" layoutX="152.0" layoutY="533.0" mnemonicParsing="false" text="En Sommeil" />
+      <Button fx:id="saveDataContactButton" layoutX="20.0" layoutY="569.0" mnemonicParsing="false" onAction="#saveDataContactClicked" prefHeight="25.0" prefWidth="105.0" styleClass="button-ajouter" text="Valider" />
+      <Button fx:id="updateData" layoutX="146.0" layoutY="569.0" mnemonicParsing="false" onAction="#updateDataContactClicked" prefHeight="25.0" prefWidth="105.0" styleClass="button-modifier" text="Modifier" />
+      <GridPane layoutX="8.0" layoutY="2.0" prefHeight="523.0" prefWidth="381.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0" prefWidth="126.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.0" minWidth="10.0" prefWidth="237.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="24.0" text="Titre" />
+            <ComboBox fx:id="titre" prefHeight="25.0" prefWidth="252.0" GridPane.columnIndex="1" />
+            <Label prefHeight="17.0" prefWidth="48.0" text="Nom" GridPane.rowIndex="1" />
+            <TextField fx:id="nom" prefHeight="25.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Prenom" GridPane.rowIndex="2" />
+            <TextField fx:id="prenom" prefHeight="25.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Fonction/Service" GridPane.rowIndex="3" />
+            <TextField fx:id="fonction" prefHeight="25.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Adresse" GridPane.rowIndex="4" />
+            <TextField fx:id="adresse" prefHeight="25.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label prefHeight="17.0" prefWidth="126.0" text="Code Postal " GridPane.rowIndex="5" />
+            <TextField fx:id="codePostale" prefHeight="17.0" prefWidth="65.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label prefHeight="17.0" prefWidth="126.0" text="Ville" GridPane.rowIndex="6" />
+            <TextField fx:id="ville" prefHeight="25.0" prefWidth="176.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label prefHeight="17.0" prefWidth="65.0" text="Pays" GridPane.rowIndex="7" />
+            <TextField fx:id="pays" editable="false" prefHeight="25.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label text="Standard" GridPane.rowIndex="8" />
+            <TextField fx:id="standard" prefHeight="25.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label text="Bureau" GridPane.rowIndex="9" />
+            <TextField fx:id="bureau" prefHeight="25.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Label text="Fax" GridPane.rowIndex="10" />
+            <TextField fx:id="fax" prefHeight="25.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Label text="Mobile" GridPane.rowIndex="11" />
+            <TextField fx:id="mobile" prefHeight="25.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <Label text="Telex" GridPane.rowIndex="12" />
+            <TextField fx:id="telex" prefHeight="25.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <Label text="E-Mail" GridPane.rowIndex="13" />
+            <TextField fx:id="mail" prefHeight="25.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+            <Label text="Web" GridPane.rowIndex="14" />
+            <TextField fx:id="web" prefHeight="25.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+            <Label text="Autre" GridPane.rowIndex="15" />
+            <TextField fx:id="autre" prefHeight="25.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+         </children>
+      </GridPane>
+      <Button fx:id="saveDataContactButton11" layoutX="272.0" layoutY="569.0" mnemonicParsing="false" onAction="#supprimerContactEvent" prefHeight="25.0" prefWidth="105.0" styleClass="button-supprimer" text="Supprimer" />
+   </children>
+</AnchorPane>

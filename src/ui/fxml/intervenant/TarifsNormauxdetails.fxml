@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import jfxtras.scene.control.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="323.0" prefWidth="419.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.intervenant.TarifsNormauxdetailsController">
+   <children>
+      <TextField fx:id="type" editable="false" layoutX="108.0" layoutY="43.0" />
+      <TextField fx:id="libelle" editable="false" layoutX="108.0" layoutY="77.0" prefHeight="25.0" prefWidth="206.0" />
+      <TextField fx:id="duree" editable="false" layoutX="108.0" layoutY="114.0" />
+      <TextField fx:id="base" editable="false" layoutX="108.0" layoutY="150.0" />
+      <TextField fx:id="taux" layoutX="107.0" layoutY="185.0" prefHeight="25.0" prefWidth="56.0" />
+      <TextField fx:id="montant" editable="false" layoutX="106.0" layoutY="223.0" />
+      <Label layoutX="55.0" layoutY="43.0" prefHeight="25.0" prefWidth="39.0" text="Type" />
+      <Label layoutX="47.0" layoutY="77.0" prefHeight="25.0" prefWidth="39.0" text="Libelle" />
+      <Label layoutX="50.0" layoutY="114.0" prefHeight="25.0" prefWidth="48.0" text="Durée" />
+      <Label layoutX="56.0" layoutY="150.0" prefHeight="25.0" prefWidth="67.0" text="Base" />
+      <Label layoutX="55.0" layoutY="184.0" prefHeight="25.0" prefWidth="67.0" text="Taux" />
+      <Label layoutX="37.0" layoutY="223.0" prefHeight="25.0" prefWidth="67.0" text="Montant" />
+      <Button fx:id="saveTaux" layoutX="104.0" layoutY="270.0" mnemonicParsing="false" onAction="#saveTaux" prefHeight="27.0" prefWidth="113.0" stylesheets="@../../styles/Ajouter.css" text="Sauvegarder" />
+      <Label layoutX="169.0" layoutY="185.0" prefHeight="25.0" prefWidth="67.0" text="\%" />
+      <Label layoutX="267.0" layoutY="224.0" prefHeight="25.0" prefWidth="67.0" text="Ariary" />
+   </children>
+   <stylesheets>
+      <URL value="@../../styles/formulaire.css" />
+      <URL value="@../../styles/Labels.css" />
+   </stylesheets>
+</AnchorPane>

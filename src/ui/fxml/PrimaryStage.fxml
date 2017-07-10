@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="vbox" prefHeight="685.0" prefWidth="1184.0" stylesheets="@../styles/accueil-principal.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.PrimaryStageController">
+  <children>
+    <MenuBar style="-fx-background-color: #DD423D;" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="Application">
+          <items>
+            <MenuItem fx:id="fermer" mnemonicParsing="false" onAction="#fermer" text="Précédent" />
+            <MenuItem mnemonicParsing="false" text="Quitter" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="About">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About LawApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane fx:id="scene" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Pane fx:id="panneauHaut" minWidth="-Infinity" prefHeight="107.0" prefWidth="1184.0" style="-fx-background-color: #DD423D;">
+               <children>
+                  <Label fx:id="titreFenetre" layoutX="139.0" layoutY="16.0" prefHeight="30.0" prefWidth="232.0" text="Law Office Application" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="descriptionFenetre" layoutX="139.0" layoutY="50.0" text="SMR &amp; HR Law Office" textFill="WHITE" />
+                  <Label fx:id="descFenetre" layoutX="139.0" layoutY="67.0" prefHeight="25.0" prefWidth="160.0" text="Immeuble vitré Ankorondrano" textFill="WHITE" />
+                  <Label fx:id="nomuser" alignment="CENTER_RIGHT" layoutX="739.0" layoutY="24.0" prefHeight="25.0" prefWidth="368.0" text="Nom" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="738.0" layoutY="52.0" prefHeight="16.0" prefWidth="368.0" text="Intervenant" textFill="WHITE" />
+                  <ImageView fitHeight="63.0" fitWidth="62.0" layoutX="26.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icones/home/Balance%20Filled-100.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="43.0" fitWidth="62.0" layoutX="1114.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icones/home/User%20Group%20Man%20Man%20Filled.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="panneauPrincipal" layoutX="-1.0" layoutY="109.0" prefHeight="551.0" prefWidth="1184.0" style="-fx-background-color: white;">
+               <children>
+                  <Button fx:id="dossierButton" alignment="CENTER" contentDisplay="TOP" layoutX="195.0" layoutY="26.0" mnemonicParsing="false" onAction="#menuClicked" prefHeight="159.0" prefWidth="160.0" style="-fx-background-color: #F5C130;" styleClass="item-menu" text="Dossiers">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icones/home/Folder%20Filled.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="clientButton" alignment="CENTER" contentDisplay="TOP" layoutX="366.0" layoutY="195.0" mnemonicParsing="false" onAction="#menuClicked" prefHeight="159.0" prefWidth="160.0" style="-fx-background-color: #029688;" styleClass="item-menu" text="Clients" textOverrun="CLIP">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icones/home/User%20Group%20Man%20Man%20Filled.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="feuilleTemps" alignment="CENTER" contentDisplay="TOP" layoutX="195.0" layoutY="195.0" mnemonicParsing="false" onAction="#menuClicked" prefHeight="159.0" prefWidth="160.0" style="-fx-background-color: #8DC73E;" styleClass="item-menu" text="Feuille de temps">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icones/home/Tear%20Off%20Calendar%20Filled.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="IntervenantButton" alignment="CENTER" contentDisplay="TOP" layoutX="24.0" layoutY="366.0" mnemonicParsing="false" onAction="#menuClicked" prefHeight="159.0" prefWidth="160.0" style="-fx-background-color: #C43220;" styleClass="item-menu" text="Intervenants">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icones/home/User%20Groups%20Filled.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="ContactButton" alignment="CENTER" contentDisplay="TOP" layoutX="24.0" layoutY="26.0" mnemonicParsing="false" onAction="#menuClicked" opacity="0.88" prefHeight="159.0" prefWidth="160.0" style="-fx-background-color: #da542c;" styleClass="item-menu" text="Contacts">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icones/home/Business%20Contact%20Filled.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button contentDisplay="TOP" layoutX="195.0" layoutY="366.0" mnemonicParsing="false" onAction="#parametresMenu" prefHeight="159.0" prefWidth="160.0" style="-fx-background-color: #80397b;" styleClass="item-menu" text="Paramètres">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icones/home/Settings%20Filled.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="utilisateur" contentDisplay="TOP" layoutX="366.0" layoutY="366.0" mnemonicParsing="false" onAction="#configUserMenu" prefHeight="159.0" prefWidth="160.0" style="-fx-background-color: #0093D4;" styleClass="item-menu" text="Utilisateurs">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icones/home/User%20Menu%20Male%20Filled.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Pane layoutX="533.0" layoutY="15.0" prefHeight="522.0" prefWidth="642.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="13.0" layoutY="8.0" text="Vos tâches aujourd'hui">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tabTaches" layoutX="13.0" layoutY="33.0" prefHeight="220.0" prefWidth="618.0">
+                          <columns>
+                            <TableColumn fx:id="tacheCol" prefWidth="132.0" text="Tâche" />
+                            <TableColumn fx:id="obsCol" minWidth="0.0" prefWidth="196.0" text="Observateur" />
+                              <TableColumn fx:id="dossCol" prefWidth="288.0" text="Dossier" />
+                          </columns>
+                        </TableView>
+                        <TableView layoutX="13.0" layoutY="291.0" prefHeight="220.0" prefWidth="618.0">
+                          <columns>
+                            <TableColumn prefWidth="147.0" text="Type" />
+                            <TableColumn prefWidth="237.0" text="Dossier" />
+                              <TableColumn prefWidth="231.0" text="Notes" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="14.0" layoutY="263.0" text="Prochaines dates de procédures">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Button fx:id="planning" contentDisplay="TOP" layoutX="366.0" layoutY="26.0" mnemonicParsing="false" onAction="#menuClicked" prefHeight="159.0" prefWidth="160.0" style="-fx-background-color: #029f01;" styleClass="item-menu" text="Planning">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icones/home/Planner%20Filled.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="factureButton" alignment="CENTER" contentDisplay="TOP" layoutX="24.0" layoutY="195.0" mnemonicParsing="false" onAction="#menuClicked" prefHeight="159.0" prefWidth="160.0" style="-fx-background-color: #0093D4;" styleClass="item-menu" text="Factures" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icones/home/Invoice%20Filled.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  
+               </children></Pane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

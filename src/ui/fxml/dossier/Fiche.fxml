@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1155.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.dossier.FicheController">
+   <children>
+      <Pane layoutX="438.0" layoutY="9.0" prefHeight="335.0" prefWidth="354.0" style="-fx-background-color: white; -fx-background-radius: 2px;">
+         <children>
+            <Label layoutX="127.0" layoutY="14.0" text="Gestionnaire" textFill="#dd423d">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="gestionnaire" alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="57.0" prefHeight="17.0" prefWidth="336.0" text="Label">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+            <ListView fx:id="listeIntervenants" layoutX="10.0" layoutY="124.0" prefHeight="159.0" prefWidth="336.0" />
+            <Label layoutX="11.0" layoutY="98.0" text="Intervenants">
+               <font>
+                  <Font size="12.0" />
+               </font></Label>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="290.0" mnemonicParsing="false" onAction="#addIntervenant" prefHeight="38.0" prefWidth="38.0" text="Ajouter">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/icones/blue/Add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="56.0" layoutY="290.0" mnemonicParsing="false" onAction="#delIntervenant" prefHeight="38.0" prefWidth="41.0" text="Enlever">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/icones/red/Minus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </Pane>
+      <Pane layoutX="799.0" layoutY="9.0" mouseTransparent="true" prefHeight="306.0" prefWidth="347.0" style="-fx-background-color: white; -fx-background-radius: 2px;">
+         <children>
+            <Label layoutX="75.0" layoutY="14.0" text="Apporteur du dossier" textFill="#dd423d">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Text fx:id="infoApporteur" layoutX="24.0" layoutY="68.0" lineSpacing="10.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="299.0">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="7.0" layoutY="9.0" prefHeight="552.0" prefWidth="423.0" style="-fx-background-color: white; -fx-background-radius: 2px;">
+         <children>
+            <GridPane hgap="10.0" layoutX="17.0" layoutY="48.0" prefHeight="409.0" prefWidth="372.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="224.0" minWidth="10.0" prefWidth="125.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="219.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Client" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Adversaire" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Lieu" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Date d'ouverture" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Nature" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="N° procédure" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Juridiction" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Région" GridPane.rowIndex="8">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nomClient" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nomAdversaire" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lieu" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dateOuverture" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nature" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="noProcedure" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="juridiction" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="region" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="enCours" mnemonicParsing="false" text="En cours" GridPane.rowIndex="9">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </CheckBox>
+                  <Label text="Nom du dossier" />
+                  <Label fx:id="vnomDossier" text="Label" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <Label layoutX="134.0" layoutY="14.0" text="Informations" textFill="#dd423d">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="14.0" layoutY="494.0" mnemonicParsing="false" onAction="#editInfo" prefHeight="27.0" prefWidth="37.0" text="Button">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/icones/blue/Edit%20Filled.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="printButton" layoutX="68.0" layoutY="494.0" mnemonicParsing="false" onAction="#printFiche" prefHeight="34.0" prefWidth="66.0" text="Imprimer" />
+         </children>
+      </Pane>
+      <Pane layoutX="438.0" layoutY="352.0" prefHeight="216.0" prefWidth="708.0" style="-fx-background-radius: 2px; -fx-background-color: white;">
+         <children>
+            <Label layoutX="11.0" layoutY="7.0" text="Evénements" />
+            <TableView fx:id="tabEvt" layoutX="11.0" layoutY="33.0" prefHeight="176.0" prefWidth="686.0">
+              <columns>
+                <TableColumn fx:id="dateCol" prefWidth="123.0" text="Date" />
+                  <TableColumn fx:id="tacheCol" minWidth="0.0" prefWidth="458.0" text="Tache" />
+                  <TableColumn fx:id="dureeCol" prefWidth="78.0" text="Durée" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Button layoutX="799.0" layoutY="320.0" mnemonicParsing="false" onAction="#addApporteur" prefHeight="24.0" prefWidth="114.0" text="Lier un contact" />
+   </children>
+</AnchorPane>

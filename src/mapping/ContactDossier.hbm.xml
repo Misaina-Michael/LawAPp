@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="modeles.dossiers.ContactDossier" table="contactdossier" lazy="false">
+	    <id name="id" column="idcontdoss" type="integer">
+                
+                <generator class="sequence">  
+                    <param name="sequence">contactdossier_idcontdoss_seq</param>  
+                </generator>  
+            </id>
+	    <property name="idContact" column="idcontact"/>
+	    <property name="idDossier" column="iddossier"/>
+	    <property name="typeContact" column="typecontact"/>
+	    
+	</class>
+</hibernate-mapping>

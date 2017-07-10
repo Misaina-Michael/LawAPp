@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import jfxtras.labs.scene.control.*?>
+<?import jfxtras.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import jfxtras.scene.layout.*?>
+<?import java.net.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="629.0" prefWidth="1196.0" style="-fx-background-color: ;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.intervenant.IntervenantAccueilController">
+   <children>
+      <ListView fx:id="listViewIntervenant" layoutX="14.0" layoutY="221.0" prefHeight="405.0" prefWidth="302.0" />
+      <Pane layoutX="-1.0" prefHeight="72.0" prefWidth="1196.0" style="-fx-background-color: #dd423d;">
+         <children>
+            <Button fx:id="ficheButton" alignment="CENTER" contentDisplay="TOP" layoutX="432.0" layoutY="7.0" mnemonicParsing="false" onAction="#ficheButtonAction" prefHeight="60.0" prefWidth="84.0" styleClass="button-item" text="Fiche">
+              
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/iconesWhite/Info%20Squared%20Filled-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <stylesheets>
+                  <URL value="@../../styles/barreTaches.css" />
+                  <URL value="@../../styles/formulaire.css" />
+               </stylesheets>
+            </Button>
+            <Button fx:id="planningButton" alignment="CENTER" contentDisplay="TOP" layoutX="750.0" layoutY="6.0" mnemonicParsing="false" onAction="#planningButtonAction" prefHeight="60.0" prefWidth="90.0" styleClass="button-item" stylesheets="@../../styles/barreTaches.css" text="Planning">
+              
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/iconesWhite/Timetable%20Filled-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="tNormauxButton" alignment="CENTER" contentDisplay="TOP" layoutX="534.0" layoutY="6.0" mnemonicParsing="false" onAction="#tarifNormalAction" prefHeight="60.0" prefWidth="97.0" styleClass="button-item" stylesheets="@../../styles/barreTaches.css" text="Tarifs Normaux">
+              
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/iconesWhite/Pricing%20Structure%20Filled-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="dossierButton" alignment="CENTER" contentDisplay="TOP" layoutX="641.0" layoutY="8.0" mnemonicParsing="false" onAction="#dossierButtonAction" prefHeight="60.0" prefWidth="90.0" styleClass="button-item" stylesheets="@../../styles/barreTaches.css" text="Dossier">
+             
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/iconesWhite/Folder%20Filled-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="nouveauButton" alignment="CENTER" contentDisplay="TOP" layoutX="323.0" layoutY="4.0" mnemonicParsing="false" onAction="#newclicked" prefHeight="65.0" prefWidth="84.0" styleClass="button-item" stylesheets="@../../styles/barreTaches.css">
+             
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/iconesWhite/Add%20User%20Male%20Filled-50%20.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="14.0" layoutY="4.0" prefHeight="21.0" prefWidth="268.0" text="Informations sur l'intervenant :" textFill="WHITE" />
+            <Label fx:id="intervenantName" layoutX="14.0" layoutY="27.0" prefHeight="21.0" prefWidth="302.0" text="-------------------" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="tarifspecial" alignment="CENTER" contentDisplay="TOP" layoutX="864.0" layoutY="8.0" mnemonicParsing="false" onAction="#tarifSpecialButtonAction" prefHeight="43.0" prefWidth="97.0" styleClass="button-item" stylesheets="@../../styles/barreTaches.css" text="Tarifs Spéciaux">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/iconesWhite/Contrat%20de%20travail%20Filled-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="intervenantAccueilPane" layoutX="331.0" layoutY="77.0" prefHeight="548.0" prefWidth="851.0" style="-fx-background-color: white;" />
+      <TitledPane collapsible="false" layoutX="14.0" layoutY="77.0" prefHeight="141.0" prefWidth="302.0" style="-fx-background-color:white ;" text="Search" textAlignment="JUSTIFY">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="109.0" prefWidth="300.0" style="-fx-background-color: white;">
+               <children>
+                  <TextField fx:id="nominterv" layoutX="96.0" layoutY="24.0" onAction="#validerNomAction" prefHeight="28.0" prefWidth="179.0" />
+                  <ComboBox fx:id="fonction" layoutX="97.0" layoutY="64.0" onAction="#onselectFonction" prefHeight="29.0" prefWidth="178.0" />
+                  <Label layoutX="12.0" layoutY="33.0" text="Nom" />
+                  <Label layoutX="11.0" layoutY="74.0" prefHeight="17.0" prefWidth="56.0" text="Fonction" />
+               </children>
+            </AnchorPane>
+        </content>
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icones/blue/Search%20Filled.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../styles/barreTaches.css" />
+      <URL value="@../../styles/formulaire.css" />
+      <URL value="@../../styles/titledPane.css" />
+   </stylesheets>
+</AnchorPane>

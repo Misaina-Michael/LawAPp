@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1155.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.dossier.ListePlanningDossierController">
+   <children>
+      <TableView fx:id="tabListe" layoutX="7.0" layoutY="52.0" prefHeight="467.0" prefWidth="1141.0" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="52.0">
+        <columns>
+          <TableColumn fx:id="colDate" prefWidth="101.0" text="Date" />
+          <TableColumn fx:id="colHeure" prefWidth="84.0" text="Heure" />
+            <TableColumn fx:id="colInterv" prefWidth="279.0" text="Intervenant" />
+            <TableColumn fx:id="colNotes" prefWidth="674.0" text="Note" />
+        </columns>
+      </TableView>
+      <Button contentDisplay="GRAPHIC_ONLY" layoutX="7.0" layoutY="532.0" mnemonicParsing="false" onAction="#createPlanning" prefHeight="37.0" prefWidth="47.0" text="Nouveau">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icones/blue/Add%20Filled.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label layoutX="7.0" layoutY="14.0" text="Planning">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button contentDisplay="GRAPHIC_ONLY" layoutX="61.0" layoutY="532.0" mnemonicParsing="false" onAction="#delete" prefHeight="37.0" prefWidth="47.0" text="Button">
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icones/red/Trash%20Filled.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button contentDisplay="GRAPHIC_ONLY" layoutX="191.0" layoutY="532.0" mnemonicParsing="false" onAction="#print" prefHeight="37.0" prefWidth="47.0" text="Button">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/Print%20Filled.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="326.0" prefWidth="819.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="ui.controllers.intervenant.DetailPlanningController">
+   <children>
+      <TableView fx:id="DetailEvenements" prefHeight="328.0" prefWidth="834.0">
+         <columns>
+            <TableColumn fx:id="date" prefWidth="97.0" text="Date" />
+            <TableColumn fx:id="intervenant" prefWidth="115.0" text="Intervenant" />
+            <TableColumn fx:id="demandeur" prefWidth="101.0" text="Demandeur" />
+            <TableColumn fx:id="evenement" prefWidth="218.0" text="Evènement" />
+            <TableColumn fx:id="notes" prefWidth="155.0" text="Notes" />
+            <TableColumn fx:id="duree" minWidth="0.0" prefWidth="142.0" text="Durée" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

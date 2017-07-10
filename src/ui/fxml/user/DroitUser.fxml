@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="335.0" prefWidth="532.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.user.DroitUserController">
+   <children>
+      <Button fx:id="saveDroitButton" layoutX="226.0" layoutY="277.0" mnemonicParsing="false" onAction="#saveDroitClick" prefHeight="25.0" prefWidth="130.0" text="Sauvegarder" />
+      <GridPane layoutX="260.0" layoutY="23.0" prefHeight="204.0" prefWidth="264.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="64.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="242.0" minWidth="10.0" prefWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Contact" />
+            <Label text="Client" GridPane.rowIndex="1" />
+            <Label text="Intervenant" GridPane.rowIndex="2" />
+            <Label text="Dossiers" GridPane.rowIndex="3" />
+            <ComboBox fx:id="contact" prefHeight="25.0" prefWidth="189.0" GridPane.columnIndex="1" />
+            <ComboBox fx:id="client" prefHeight="25.0" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="intervenant" prefHeight="25.0" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="dossier" prefHeight="25.0" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="11.0" layoutY="23.0" prefHeight="204.0" prefWidth="234.0">
+         <children>
+            <Label text="Planning" GridPane.rowIndex="1" />
+            <Label prefHeight="17.0" prefWidth="66.0" text="Factures" GridPane.rowIndex="2" />
+            <Label text="Feuille de temps" GridPane.rowIndex="3" />
+            <ComboBox fx:id="utilisateur" prefHeight="25.0" prefWidth="189.0" GridPane.columnIndex="1" />
+            <ComboBox fx:id="planning" prefHeight="25.0" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="factures" prefHeight="25.0" prefWidth="172.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </ComboBox>
+            <ComboBox fx:id="feuilledetemps" prefHeight="25.0" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Utilisateur" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="92.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="142.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

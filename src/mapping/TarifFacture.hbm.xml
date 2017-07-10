@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="modeles.facturation.TarifFacture" table="tariffacture" lazy="false">
+	    <id name="id" column="idtariffacture" type="integer">
+                
+                <generator class="sequence">  
+                    <param name="sequence">tariffacture_idtariffacture_seq</param>  
+                </generator>  
+            </id>
+	  
+	    <property name="idFacture" column="idfacture"/>
+	  
+	    <property name="mt" column="mt"/>
+	    <property name="idTypeTarif" column="idtypetarif"/>
+	   
+            
+	</class>
+</hibernate-mapping>

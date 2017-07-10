@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="modeles.intervenants.IntervenantDossier" table="intervenantdossier" lazy="false">
+	    
+            <id name="id" column="idassoc" type="integer">
+                
+                <generator class="sequence">  
+                    <param name="sequence">seq_intervdoss</param>  
+                </generator>  
+            </id>
+	    
+	    <property name="idIntervenant" column="idintervenant"/>
+	    <property name="idDossier" column="iddossier"/>
+	</class>
+</hibernate-mapping>

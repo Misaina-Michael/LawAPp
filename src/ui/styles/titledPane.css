@@ -1,0 +1,10 @@
+.titled-pane > *.content 
+{
+    -fx-background-color: red; 
+}
+
+.titled-pane > .title 
+{  
+    -fx-background-radius:  0px;
+    
+}

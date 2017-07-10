@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="modeles.facturation.FactureEvtLibelle" table="factureevtlibelle" lazy="false">
+	    <id name="id" column="idfactureevt" type="integer">
+                
+                <generator class="sequence">  
+                    <param name="sequence">factureevt_idfactureevt_seq</param>  
+                </generator>  
+            </id>
+	    <property name="idFacture" column="idfacture"/>
+	    <property name="idEvtDossier" column="idevtdossier"/>
+	    <property name="idDossier" column="iddossier"/>
+	    <property name="idEvtTarif" column="idevttarif"/>
+	    <property name="idIntervenant" column="idintervenant"/>
+	    <property name="duree" column="duree"/>
+	    <property name="mt" column="mt"/>
+	    <property name="daty" column="daty"/>
+	    <property name="afacturer" column="afacturer"/>
+	    <property name="note" column="note"/>
+	    <property name="nomInterv" column="nominterv"/>
+	    <property name="demandeur" column="demandeur"/>
+	    <property name="codeInterv" column="codeinterv"/>
+	    <property name="libelle" column="libelle"/>
+	    <property name="code" column="code"/>
+	    <property name="idTypeTarif" column="idtypetarif"/>
+	    <property name="libTypeTarif" column="libtypetarif"/>
+	
+            
+	</class>
+</hibernate-mapping>

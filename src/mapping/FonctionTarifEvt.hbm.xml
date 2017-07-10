@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="modeles.intervenants.FonctionTarifEvt" table="fonctiontarifevt" lazy="false">
+        <id name="id" column="idfonctiontarifevt" type="integer">               
+            <generator class="sequence">  
+                <param name="sequence">intervenant_idintervenant_seq</param>  
+            </generator>  
+        </id>
+        <property name="idFonction" column="idfonction"/>
+        <property name="idEvtTarif" column="idevttarif"/>
+        
+        
+    </class>
+</hibernate-mapping>

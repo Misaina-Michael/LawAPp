@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import jfxtras.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="panneau" prefHeight="643.0" prefWidth="1204.0" style="-fx-background-color: #f5f6f7;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.client.PanneauPrincipalClientController">
+    <children>
+      <Pane fx:id="panHaut" prefHeight="94.0" prefWidth="1218.0" style="-fx-background-color: #DD423D;">
+         <children>
+            <Button fx:id="ajoutButton" contentDisplay="TOP" layoutX="255.0" layoutY="9.0" mnemonicParsing="false" onAction="#create" prefHeight="70.0" prefWidth="87.0" styleClass="button-item" text="Nouveau">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/icones/white/Add%20Filled-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label fx:id="titreFenetre" layoutX="85.0" layoutY="14.0" prefHeight="30.0" prefWidth="87.0" text="Clients" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="ficheButton" contentDisplay="TOP" layoutX="440.0" layoutY="9.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="70.0" prefWidth="87.0" styleClass="button-item" text="Fiche">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/icones/white/Info%20Filled.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="contactButton" contentDisplay="TOP" layoutX="644.0" layoutY="9.0" mnemonicParsing="false" onAction="#contactButton" prefHeight="70.0" prefWidth="87.0" styleClass="button-item" text="Contacts">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/icones/white/Conference%20Call%20Filled.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="facturationButton" contentDisplay="TOP" layoutX="541.0" layoutY="9.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="70.0" prefWidth="87.0" styleClass="button-item" text="Facturation">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/icones/white/POS%20Terminal%20Filled.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ImageView fx:id="logoFenetre" fitHeight="68.0" fitWidth="88.0" layoutX="6.0" layoutY="13.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icones/white/User%20Group%20Man%20Man%20Filled.png" />
+               </image></ImageView>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="1118.0" layoutY="19.0" mnemonicParsing="false" onAction="#print" prefHeight="53.0" prefWidth="57.0" styleClass="button-item" text="Button">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/Print%20Filled-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="panCentre" layoutY="88.0" prefHeight="578.0" prefWidth="1218.0">
+         <children>
+              <ListView fx:id="listeClientView" layoutX="4.0" layoutY="61.0" prefHeight="475.0" prefWidth="236.0" />
+              <Pane fx:id="panPrincipalClient" layoutX="249.0" layoutY="30.0" prefHeight="546.0" prefWidth="963.0" />
+              <TextField fx:id="zoneRecherche" layoutX="4.0" layoutY="30.0" onAction="#rechercher" prefHeight="24.0" prefWidth="236.0" promptText="Recherche" />
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="4.0" layoutY="541.0" mnemonicParsing="false" onAction="#delete" prefHeight="30.0" prefWidth="30.0" text="Button">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/icones/red/Trash%20Filled.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+    </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <stylesheets>
+      <URL value="@../../styles/buttonStyle.css" />
+      <URL value="@../../styles/formulaire.css" />
+      <URL value="@../../styles/barreTaches.css" />
+   </stylesheets>
+</AnchorPane>

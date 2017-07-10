@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="modeles.facturation.TarifsFacture" table="tarifsfacture" lazy="false">
+	    <id name="id" column="idtarifsfacture" type="integer">
+                
+                <generator class="sequence">  
+                    <param name="sequence">tarifsfacture_idtarifsfacture_seq</param>  
+                </generator>  
+            </id>
+	    <property name="idIntervenant" column="idintervenant"/>
+	    <property name="idFacture" column="idfacture"/>
+	    <property name="mtHonoraire" column="mthonoraire"/>
+	    <property name="mtGestion" column="mtgestion"/>
+	    <property name="mtFrais" column="mtfrais"/>
+	    <property name="mtDebours" column="mtdebours"/>
+	    <property name="totalHt" column="totalht"/>
+	    <property name="tva" column="tva"/>
+	    <property name="totalTtc" column="totalttc"/>
+	   
+            
+	</class>
+</hibernate-mapping>

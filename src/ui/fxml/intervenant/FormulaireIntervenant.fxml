@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.validation.*?>
+<?import jfxtras.labs.scene.control.window.*?>
+<?import jfxtras.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="AnchorpaneformulaireIntervenant" prefHeight="564.0" prefWidth="881.0" style="-fx-background-color: white;" stylesheets="@../../styles/formulaire.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.intervenant.FormulaireIntervenantController">
+   <children>
+      <TextField fx:id="code" layoutX="125.0" layoutY="29.0" prefHeight="25.0" prefWidth="80.0" />
+      <TextField fx:id="nom" layoutX="125.0" layoutY="60.0" prefHeight="25.0" prefWidth="254.0" />
+      <TextField fx:id="prenom" layoutX="125.0" layoutY="93.0" prefHeight="27.0" prefWidth="254.0" />
+      <TextField fx:id="compteTiers" layoutX="125.0" layoutY="160.0" prefHeight="27.0" prefWidth="254.0" />
+      <ComboBox fx:id="fonction" layoutX="125.0" layoutY="127.0" prefHeight="25.0" prefWidth="254.0" />
+      <CheckBox fx:id="gestionnaire" layoutX="393.0" layoutY="131.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="88.0" text="Gestionnaire" />
+      <TextArea fx:id="adresse" layoutX="125.0" layoutY="195.0" prefHeight="44.0" prefWidth="254.0" />
+      <TextField fx:id="pays" layoutX="125.0" layoutY="248.0" prefHeight="25.0" prefWidth="131.0" />
+      <TextField fx:id="codePostale" layoutX="264.0" layoutY="248.0" prefHeight="17.0" prefWidth="80.0" />
+      <TextField fx:id="ville" layoutX="351.0" layoutY="248.0" prefHeight="25.0" prefWidth="159.0" />
+      <Label layoutX="81.0" layoutY="33.0" text="Code " />
+      <Label layoutX="81.0" layoutY="64.0" text="Nom " />
+      <Label layoutX="67.0" layoutY="97.0" text="Prenom" />
+      <Label layoutX="64.0" layoutY="131.0" text="Fonction" />
+      <Label layoutX="39.0" layoutY="164.0" text="Compte tiers" />
+      <Label layoutX="66.0" layoutY="193.0" text="Adresse" />
+      <Label layoutX="25.0" layoutY="252.0" text="Pays / CP / Ville" />
+      <TextField fx:id="bureau" layoutX="125.0" layoutY="292.0" prefHeight="27.0" prefWidth="254.0" />
+      <TextField fx:id="domicile" layoutX="125.0" layoutY="327.0" prefHeight="27.0" prefWidth="254.0" />
+      <TextField fx:id="fax" layoutX="125.0" layoutY="362.0" prefHeight="27.0" prefWidth="254.0" />
+      <TextField fx:id="email" layoutX="125.0" layoutY="398.0" prefHeight="27.0" prefWidth="254.0" />
+      <TextField fx:id="mobile" layoutX="125.0" layoutY="433.0" prefHeight="27.0" prefWidth="254.0" />
+      <Label layoutX="74.0" layoutY="296.0" text="Bureau" />
+      <Label fx:id="" layoutX="63.0" layoutY="328.0" text="Domicile" />
+      <Label layoutX="85.0" layoutY="366.0" text="FAX" />
+      <Label layoutX="71.0" layoutY="402.0" text="E-Mail" />
+      <Label layoutX="69.0" layoutY="437.0" text="Mobile" />
+      <TitledPane animated="false" collapsible="false" layoutX="536.0" layoutY="24.0" prefHeight="273.0" prefWidth="300.0" style="-fx-background-color: white;" text="Objectifs">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="222.0" prefWidth="298.0">
+               <children>
+                  <TextField fx:id="seuilBas" layoutX="112.0" layoutY="28.0" />
+                  <TextField fx:id="seuilIntermediaire" layoutX="112.0" layoutY="62.0" />
+                  <TextField fx:id="seuilHaut" layoutX="112.0" layoutY="99.0" />
+                  <TextField fx:id="seuilJournalier" layoutX="112.0" layoutY="134.0" />
+                  <TextField fx:id="seuilHoraire" layoutX="112.0" layoutY="172.0" prefHeight="25.0" prefWidth="151.0" />
+                  <Label layoutX="56.0" layoutY="32.0" text="Seuil Bas" />
+                  <Label layoutX="5.0" layoutY="66.0" prefHeight="17.0" prefWidth="102.0" text="Seuil Intermediaire" />
+                  <Label layoutX="51.0" layoutY="103.0" prefHeight="17.0" prefWidth="56.0" text="Seuil Haut" />
+                  <Label layoutX="27.0" layoutY="138.0" text="Seuil Journalier" />
+                  <Label layoutX="35.0" layoutY="176.0" text="Seuil Horaire" />
+                  <Label layoutX="268.0" layoutY="32.0" prefHeight="17.0" prefWidth="21.0" text="Ar" />
+                  <Label layoutX="268.0" layoutY="67.0" prefHeight="17.0" prefWidth="21.0" text="Ar" />
+                  <Label layoutX="268.0" layoutY="103.0" prefHeight="17.0" prefWidth="21.0" text="Ar" />
+                  <Label layoutX="268.0" layoutY="139.0" prefHeight="17.0" prefWidth="21.0" text="Ar" />
+                  <Label layoutX="269.0" layoutY="176.0" prefHeight="17.0" prefWidth="21.0" text="h" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="536.0" layoutY="299.0" prefHeight="174.0" prefWidth="300.0" text="RIB /IBAN">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="bic" layoutX="118.0" layoutY="16.0" />
+                  <TextField fx:id="rib" layoutX="118.0" layoutY="49.0" />
+                  <Label layoutX="89.0" layoutY="20.0" text="BIC" />
+                  <Label layoutX="89.0" layoutY="53.0" text="RIB" />
+                  <TextField fx:id="iban" layoutX="118.0" layoutY="87.0" />
+                  <Label layoutX="84.0" layoutY="91.0" text="IBAN" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TextArea fx:id="commentaire" layoutX="125.0" layoutY="467.0" prefHeight="67.0" prefWidth="317.0" />
+      <Label fx:id="commentaires" layoutX="31.0" layoutY="462.0" text="Commentaires" />
+      <Button fx:id="sauvegarder" contentDisplay="RIGHT" layoutX="657.0" layoutY="522.0" minHeight="27.0" minWidth="110.0" mnemonicParsing="false" onAction="#sauvegarderIntervenant" prefHeight="27.0" prefWidth="179.0" style="-fx-effect: Glow;" stylesheets="@../../styles/Ajouter.css" text="Sauvegarder">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="587.0" text="Note: Les droit d'acces de l'intervenant  ajoutés seront automatiquement en mode &quot;non-administrateur&quot;" />
+   </children>
+</AnchorPane>

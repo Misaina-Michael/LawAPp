@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="587.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.intervenant.DossierIntervenantController">
+   <children>
+      <TableView fx:id="dossierIntervTableView" layoutX="17.0" layoutY="32.0" prefHeight="347.0" prefWidth="709.0">
+        <columns>
+          <TableColumn fx:id="numDossier" prefWidth="174.0" text="N° Dossier" />
+          <TableColumn fx:id="nomDossier" prefWidth="527.0" text="Nom Dossier" />
+        </columns>
+      </TableView>
+      <TableView fx:id="demandeurDossierTableView" layoutX="18.0" layoutY="421.0" prefHeight="146.0" prefWidth="709.0">
+         <columns>
+            <TableColumn fx:id="numdossdem" prefWidth="172.0" text="N° Dossier" />
+            <TableColumn fx:id="nomDossDem" prefWidth="541.0" text="Nom Dossier" />
+         </columns>
+      </TableView>
+      <Label layoutX="18.0" layoutY="392.0" text="Dossiers en demandeur" />
+      <Label layoutX="19.0" layoutY="8.0" text="Dossiers en intervenant" />
+      <Separator layoutX="740.0" layoutY="295.0" prefHeight="0.0" prefWidth="64.0" />
+      <Button contentDisplay="GRAPHIC_ONLY" layoutX="746.0" layoutY="32.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="42.0" text="Button" visible="false">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icones/blue/Search.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button contentDisplay="GRAPHIC_ONLY" layoutX="746.0" layoutY="421.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="42.0" text="Button" visible="false">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icones/blue/Search.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

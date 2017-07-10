@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="modeles.evenement.TempsTravail" table="tempstravail" lazy="false">
+	    <id name="id" column="idtempstravail" type="integer">
+                
+                <generator class="sequence">  
+                    <param name="sequence">tempstravail_idtempstravail_seq</param>  
+                </generator>  
+            </id>
+	    <property name="dateTravail" column="datetravail"/>
+	    <property name="idEvtDossier" column="idevtdossier"/>
+	    <property name="dureeEnSeconde" column="dureeenseconde"/>
+	    
+	    
+	</class>
+</hibernate-mapping>

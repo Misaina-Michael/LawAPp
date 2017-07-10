@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="573.0" prefWidth="895.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.intervenant.IntervenantPlanningController">
+   <children>
+      <TableView fx:id="planningTableView" layoutX="254.0" layoutY="44.0" prefHeight="505.0" prefWidth="596.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy></TableView>
+      <Button fx:id="dateSuivant" contentDisplay="GRAPHIC_ONLY" layoutX="804.0" layoutY="4.0" mnemonicParsing="false" onAction="#dateSuivantAction" prefHeight="38.0" prefWidth="46.0" text="Suivant">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icones/blue/Sort%20Right%20Filled.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <TableView fx:id="nomDossier" layoutY="44.0" prefHeight="505.0" prefWidth="255.0">
+        <columns>
+          <TableColumn fx:id="nomCompletDossier" prefWidth="254.0" text="Dossier" />
+        </columns>
+      </TableView>
+      <Button fx:id="datePrecedent" contentDisplay="GRAPHIC_ONLY" layoutX="255.0" layoutY="4.0" mnemonicParsing="false" onAction="#datePrecedentAction" prefHeight="38.0" prefWidth="46.0" text="Précédent">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icones/blue/Sort%20Left%20Filled.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label fx:id="dateIntervalle" layoutX="413.0" layoutY="15.0" prefHeight="17.0" prefWidth="336.0" text="Label">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

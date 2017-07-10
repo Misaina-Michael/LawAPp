@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="modeles.evenement.MtTypeTarifLib" table="mttypetariflib" lazy="false">
+<!--	    <id name="id" column="iddossier" type="integer">
+                
+                <generator class="sequence">  
+                    <param name="sequence">dossier_iddossier_seq</param>  
+                </generator>  
+            </id>-->
+            <id name="id" column="idevtdossier">
+                    <generator class="assigned"/>
+            </id>
+	    <property name="mt" column="mt"/>
+            <property name="duree" column="duree"/>
+            <property name="idTypeTarif" column="idtypetarif"/>
+            <property name="libTypeTarif" column="libtypetarif"/>
+            <property name="daty" column="daty"/>
+            <property name="afacturer" column="afacturer"/>
+            <property name="idIntervenant" column="idintervenant"/>
+            <property name="idEvtTarif" column="idevttarif"/>
+            <property name="idDossier" column="iddossier"/>
+            
+	</class>
+</hibernate-mapping>

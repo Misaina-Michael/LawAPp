@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="modeles.evenement.EvenementDossier" table="evenementdossier" lazy="false">
+        <id name="id" column="idevtdossier" type="integer">
+                
+            <generator class="sequence">  
+                <param name="sequence">evenementdossier_idevtdossier_seq</param>  
+            </generator>  
+        </id>
+        <property name="idDossier" column="iddossier"/>
+        <property name="idEvtTarif" column="idevttarif"/>
+        <property name="idIntervenant" column="idintervenant"/>
+        <property name="duree" column="duree"/>
+        <property name="mt" column="mt"/>
+        <property name="daty" column="daty"/>
+        <property name="afacturer" column="afacturer"/>
+        <property name="note" column="note"/>
+        <property name="demandeur" column="demandeur"/>
+        <property name="imprimer" column="imprimer"/>	    
+	
+            
+    </class>
+</hibernate-mapping>

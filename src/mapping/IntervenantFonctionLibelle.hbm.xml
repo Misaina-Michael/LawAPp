@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="modeles.intervenants.IntervenantFonctionLibelle" table="intervenantfonctionlibelle" lazy="false">
+        <id name="id" column="idintervenant" type="integer">               
+            <generator class="sequence">  
+                <param name="sequence">intervenant_idintervenant_seq</param>  
+            </generator>  
+        </id>
+        <property name="nom" column="nom"/>
+        <property name="prenom" column="prenom"/>
+        <property name="idFonction" column="idfonction"/>
+        <property name="libelle" column="libelle"/>
+        
+        
+    </class>
+</hibernate-mapping>

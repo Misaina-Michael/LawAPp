@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class lazy="false" name="modeles.intervenants.TarifIntervLibelle" table="tarifintervlibelle">
+    <id name="id" column="idtarifinterv" type="integer">
+                
+        <generator class="sequence">  
+            <param name="sequence">tarifintervenant_idtarifinterv_seq</param>  
+        </generator>  
+    </id>
+    <property column="idevttarif" name="idEvtTarif"/>
+    <property column="mt" name="mt"/>
+    <property column="taux" name="taux"/>
+    <property column="libelle" name="libelle"/>
+    <property column="code" name="code"/>
+    <property column="mtevt" name="mtEvt"/>
+    <property column="duree" name="duree"/>
+  </class>
+</hibernate-mapping>

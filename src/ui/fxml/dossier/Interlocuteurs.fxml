@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="358.0" prefWidth="672.0" style="-fx-background-color: #f5f6f7;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.dossier.InterlocuteursController">
+   <children>
+      <ListView fx:id="listeInterlocuteurs" layoutX="7.0" layoutY="48.0" prefHeight="260.0" prefWidth="230.0" />
+      <Pane layoutX="247.0" layoutY="48.0" prefHeight="260.0" prefWidth="415.0">
+         <children>
+            <Text fx:id="infoInterlocuteur" layoutX="14.0" layoutY="18.0" lineSpacing="8.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Button layoutX="7.0" layoutY="321.0" mnemonicParsing="false" onAction="#addContact" prefHeight="24.0" prefWidth="107.0" text="Ajouter" />
+      <Button layoutX="130.0" layoutY="321.0" mnemonicParsing="false" onAction="#delContact" prefHeight="24.0" prefWidth="107.0" text="Enlever" />
+      <Label layoutX="7.0" layoutY="14.0" text="Liste des interlocuteurs">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

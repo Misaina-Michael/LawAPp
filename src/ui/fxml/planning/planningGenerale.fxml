@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import jfxtras.scene.control.*?>
+<?import jfxtras.labs.scene.control.grid.cell.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="610.0" prefWidth="1196.0" style="-fx-background-color: white;" stylesheets="@../../styles/formulaire.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.planning.PlanningGeneraleController">
+   <children>
+      <ScrollPane layoutX="59.0" layoutY="116.0" prefHeight="493.0" prefWidth="209.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="527.0" prefWidth="208.0" style="-fx-background-color: white;">
+               <children>
+                  <GridPane fx:id="gridjour1" layoutX="3.0" layoutY="8.0" prefHeight="452.0" prefWidth="191.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                  </GridPane>
+               </children></AnchorPane>
+        </content>
+      </ScrollPane>
+      <ScrollPane layoutX="268.0" layoutY="116.0" prefHeight="493.0" prefWidth="209.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="527.0" prefWidth="208.0" style="-fx-background-color: white;">
+               <children>
+                  <GridPane fx:id="gridjour2" layoutX="3.0" layoutY="8.0" prefHeight="452.0" prefWidth="191.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="477.0" layoutY="116.0" prefHeight="493.0" prefWidth="209.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="527.0" prefWidth="208.0" style="-fx-background-color: white;">
+               <children>
+                  <GridPane fx:id="gridjour3" layoutX="3.0" layoutY="8.0" prefHeight="452.0" prefWidth="191.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="686.0" layoutY="116.0" prefHeight="493.0" prefWidth="209.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="527.0" prefWidth="208.0" style="-fx-background-color: white;">
+               <children>
+                  <GridPane fx:id="gridjour4" layoutX="3.0" layoutY="8.0" prefHeight="452.0" prefWidth="191.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="895.0" layoutY="116.0" prefHeight="493.0" prefWidth="209.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="527.0" prefWidth="208.0" style="-fx-background-color: white;">
+               <children>
+                  <GridPane fx:id="gridjour5" layoutX="3.0" layoutY="8.0" prefHeight="452.0" prefWidth="191.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <Label fx:id="jour1" layoutX="59.0" layoutY="89.0" prefHeight="17.0" prefWidth="194.0" text="Mar. 15" />
+      <Label fx:id="jour2" layoutX="276.0" layoutY="89.0" prefHeight="17.0" prefWidth="194.0" text="Mar. 15" />
+      <Label fx:id="jour3" layoutX="476.0" layoutY="87.0" prefHeight="17.0" prefWidth="194.0" text="Mar. 15" />
+      <Label fx:id="jour4" layoutX="686.0" layoutY="87.0" prefHeight="17.0" prefWidth="194.0" text="Mar. 15" />
+      <Label fx:id="jour5" layoutX="895.0" layoutY="89.0" prefHeight="17.0" prefWidth="194.0" text="Mar. 15" />
+      <Button fx:id="precedent" contentDisplay="GRAPHIC_ONLY" layoutX="302.0" layoutY="25.0" mnemonicParsing="false" onAction="#precedentButtonAction" prefHeight="38.0" prefWidth="99.0" stylesheets="@../../styles/modifier.css" text="ghjghjg">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/iconesWhite/Sort%20Left%20Filled-50.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="suivant" contentDisplay="GRAPHIC_ONLY" layoutX="784.0" layoutY="24.0" mnemonicParsing="false" onAction="#onSuivantAction" prefHeight="38.0" prefWidth="99.0" stylesheets="@../../styles/modifier.css" text="Suivant">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/iconesWhite/Sort%20Right%20Filled-50.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label fx:id="intervalleDate" layoutX="511.0" layoutY="29.0" prefHeight="31.0" prefWidth="268.0" text="Du 15 au 22 Novembre  2016">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Separator layoutX="297.0" layoutY="67.0" prefHeight="0.0" prefWidth="588.0" />
+      <Label fx:id="intervalleDate1" layoutX="435.0" layoutY="29.0" prefHeight="31.0" prefWidth="81.0" text="Planning du">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboboxIntervenant" layoutX="979.0" layoutY="30.0" onAction="#onSelectIntervenant" prefHeight="31.0" prefWidth="159.0" />
+      <Label layoutX="901.0" layoutY="36.0" prefHeight="17.0" prefWidth="75.0" text="Intervenant:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="67.0" fitWidth="126.0" layoutX="53.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/calendar-5.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="actualise" contentDisplay="GRAPHIC_ONLY" layoutX="197.0" layoutY="25.0" mnemonicParsing="false" onAction="#actualisebutton" prefHeight="38.0" prefWidth="56.0" styleClass="button-modifier" text="Button">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/iconesWhite/Restart%20Filled-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

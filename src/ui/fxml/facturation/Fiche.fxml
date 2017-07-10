@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="556.0" prefWidth="1040.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.facturation.FicheController">
+   <children>
+      <ListView fx:id="intervs" layoutX="7.0" layoutY="170.0" prefHeight="342.0" prefWidth="229.0" />
+      <Label layoutX="7.0" layoutY="144.0" text="Intervenants" />
+      <GridPane hgap="10.0" layoutX="7.0" layoutY="14.0" prefHeight="120.0" prefWidth="532.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.0" minWidth="10.0" prefWidth="117.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="405.0" minWidth="10.0" prefWidth="405.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="N° du dossier" />
+            <Label text="N° de la facture" GridPane.rowIndex="2" />
+            <Label text="Nom du dossier" GridPane.columnIndex="1" />
+            <Label text="Date de la facture" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="noDossier" disable="true" GridPane.rowIndex="1" />
+            <TextField fx:id="nomDossier" disable="true" minWidth="-Infinity" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="noFact" disable="true" GridPane.rowIndex="3" />
+            <DatePicker fx:id="dateFact" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label maxWidth="-Infinity" minWidth="-Infinity" text="Type de la facture" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </Label>
+            <ComboBox fx:id="typeFact" prefHeight="24.0" prefWidth="221.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="185.0" />
+               </GridPane.margin>
+            </ComboBox>
+         </children>
+      </GridPane>
+      <GridPane fx:id="paneMt" hgap="10.0" layoutX="265.0" layoutY="174.0" prefHeight="210.0" prefWidth="273.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="131.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="10.0" prefWidth="172.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <GridPane layoutX="616.0" layoutY="392.0" prefHeight="120.0" prefWidth="389.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.0" minWidth="10.0" prefWidth="116.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="327.0" minWidth="10.0" prefWidth="273.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Date d'échéance" />
+            <Label text="Date de règlement" GridPane.rowIndex="1" />
+            <CheckBox fx:id="editee" disable="true" mnemonicParsing="false" text="Editée par" GridPane.rowIndex="3" />
+            <ComboBox fx:id="comboEditee" disable="true" prefHeight="24.0" prefWidth="269.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <DatePicker fx:id="dateEcheance" GridPane.columnIndex="1" />
+            <DatePicker fx:id="dateReglement" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <CheckBox fx:id="sansSuite" mnemonicParsing="false" onAction="#sansSuite" text="Sans suite" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Button fx:id="sauvegarder" disable="true" layoutX="9.0" layoutY="557.0" mnemonicParsing="false" onAction="#sauvegarder" styleClass="button-ajouter" text="Sauvegarder" visible="false" />
+      <GridPane hgap="5.0" layoutX="265.0" layoutY="422.0" prefHeight="90.0" prefWidth="273.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Total HT" />
+            <TextField fx:id="totalht" alignment="CENTER_RIGHT" disable="true" GridPane.columnIndex="1" />
+            <Label text="TVA" GridPane.rowIndex="1" />
+            <TextField fx:id="tva" alignment="CENTER_RIGHT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="77.0" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <TextField fx:id="mttva" alignment="CENTER_RIGHT" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="mtttc" alignment="CENTER_RIGHT" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Total TTC" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Pane layoutX="616.0" layoutY="44.0" prefHeight="228.0" prefWidth="415.0">
+         <children>
+            <Label layoutY="6.0" text="Adresse de facturation">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Text fx:id="infoAdresseFact" layoutY="44.0" lineSpacing="6.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Separator layoutX="244.0" layoutY="140.0" orientation="VERTICAL" prefHeight="372.0" prefWidth="6.0" />
+      <Separator layoutX="572.0" layoutY="11.0" orientation="VERTICAL" prefHeight="501.0" prefWidth="0.0" />
+      <Separator layoutX="584.0" layoutY="373.0" prefHeight="2.0" prefWidth="447.0" />
+      <Separator layoutX="251.0" layoutY="412.0" prefHeight="3.0" prefWidth="316.0" />
+      <Separator layoutX="7.0" layoutY="138.0" prefHeight="3.0" prefWidth="560.0" />
+      <Label layoutX="260.0" layoutY="144.0" text="Montants" />
+   </children>
+   <stylesheets>
+      <URL value="@../../styles/buttonStyle.css" />
+      <URL value="@../../styles/formulaire.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="modeles.Prof" table="PROF" lazy="false">
+	    <id name="idEmp" column="idemp" type="integer">
+                
+                <generator class="sequence">  
+                    <param name="sequence">prof_idemp_seq</param>  
+                </generator>  
+            </id>
+	    <property name="nom" column="nom"/>
+            <property name="sal" column="sal"/>
+            <property name="conge" column="conge"/>
+            <property name="naissance" column="naissance"/>
+
+	</class>
+</hibernate-mapping>

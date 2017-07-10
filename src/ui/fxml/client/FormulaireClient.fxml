@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="531.0" prefWidth="927.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.client.FormulaireClientController">
+   <children>
+      <Pane layoutX="8.0" layoutY="8.0" prefHeight="463.0" prefWidth="479.0" style="-fx-background-color: white; -fx-background-radius: 2px;">
+         <children>
+            <Label layoutX="182.0" layoutY="14.0" text="INFORMATIONS">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <GridPane hgap="5.0" layoutX="17.0" layoutY="67.0" prefHeight="242.0" prefWidth="450.0" vgap="5.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="293.0" minWidth="10.0" prefWidth="132.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="782.0" minWidth="10.0" prefWidth="313.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Numero" textAlignment="RIGHT" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Titre" textAlignment="RIGHT" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Nom" textAlignment="RIGHT" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Adresse" textAlignment="RIGHT" GridPane.rowIndex="3" />
+                  <TextField fx:id="numero" editable="false" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="85.0" GridPane.columnIndex="1" />
+                  <ComboBox fx:id="titre" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="244.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="nom" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="303.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextArea fx:id="adresse" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="303.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="cp" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="153.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="ville" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="301.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="pays" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label text="Code postal" GridPane.rowIndex="4" />
+                  <Label text="Ville" GridPane.rowIndex="5" />
+                  <Label text="Pays" GridPane.rowIndex="6" />
+               </children>
+            </GridPane>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="17.0" layoutY="326.0" text="Commentaires" textAlignment="RIGHT" />
+            <TextArea fx:id="commentaire" layoutX="154.0" layoutY="326.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="303.0" />
+         </children>
+      </Pane>
+      <Button fx:id="validerButton" layoutX="445.0" layoutY="480.0" mnemonicParsing="false" onAction="#clickValidButton" prefHeight="30.0" prefWidth="100.0" text="Valider">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icones/blue/Checked.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Pane layoutX="495.0" layoutY="8.0" prefHeight="463.0" prefWidth="424.0" style="-fx-background-color: white; -fx-background-radius: 2px;">
+         <children>
+            <GridPane layoutX="32.0" layoutY="55.0" prefHeight="261.0" prefWidth="350.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="173.0" minWidth="10.0" prefWidth="90.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="271.0" minWidth="10.0" prefWidth="260.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="mobile" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="250.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="standard" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="bureau" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="fax" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="email" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="telex" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="web" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <TextField fx:id="autre" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <Label text="Mobile" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Standard" textAlignment="RIGHT" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Bureau" textAlignment="RIGHT" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="FAX" textAlignment="RIGHT" GridPane.rowIndex="3" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="E-Mail" textAlignment="RIGHT" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Telex" textAlignment="RIGHT" GridPane.rowIndex="5" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Web" textAlignment="RIGHT" GridPane.rowIndex="6" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Autre" textAlignment="RIGHT" GridPane.rowIndex="7" />
+               </children>
+            </GridPane>
+            <Label layoutX="178.0" layoutY="14.0" text="CONTACTS">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

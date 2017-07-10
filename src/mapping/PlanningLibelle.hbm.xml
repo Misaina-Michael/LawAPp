@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="modeles.planning.PlanningLibelle" table="planninglibelle" lazy="false">
+        <id name="id" column="idplanning" type="integer">
+                
+            <generator class="sequence">  
+                <param name="sequence">planning_idplanning_seq</param>  
+            </generator>  
+        </id>
+        <property name="idDossier" column="iddossier"/>
+        <property name="idJur" column="idjur"/>
+        <property name="idTypeProcedure" column="idtypeprocedure"/>
+        <property name="notes" column="notes"/>
+        <property name="dateProcedure" column="dateprocedure"/>
+        <property name="datePlanning" column="dateplanning"/>
+        <property name="planifiee" column="planifiee"/>
+        <property name="rappel" column="rappel"/>
+        <property name="uniteRappel" column="uniterappel"/>
+        <property name="heureDebut" column="heuredebut"/>
+        <property name="heureFin" column="heurefin"/>
+        <property name="juridiction" column="juridiction"/>
+        <property name="idIntervenantpl" column="idintervenantpl"/>
+        <property name="idGestionnaire" column="idgestionnaire"/>
+        <property name="codeGestionnaire" column="codegestionnaire"/>
+        <property name="codeIntervenant" column="codeintervenant"/>
+        <property name="idEvt" column="idevenement"/>
+        <property name="codeEvt" column="codeevt"/>
+        <property name="libelleEvt" column="libevt"/>
+        <property name="libelle" column="libelle"/>
+        <property name="ville" column="ville"/>
+        <property name="transport" column="transport"/>
+        <property name="nomIntervenant" column="nominterv"/>
+        <property name="nomGestionnaire" column="nomgestionnaire"/>
+        <property name="prenomIntervenant" column="prenominterv"/>
+        <property name="prenomGestionnaire" column="prenomgestionnaire"/>
+        <property name="vnomDossier" column="vnomdossier"/>
+
+    </class>
+</hibernate-mapping>

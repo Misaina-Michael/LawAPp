@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="674.0" prefWidth="1066.0" style="-fx-background-color: #DD423D;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.facturation.PanneauFactController">
+   <children>
+      <Label layoutX="10.0" layoutY="12.0" text="Facture" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="nomFacture" layoutX="9.0" layoutY="42.0" text="Label" textFill="WHITE">
+         <font>
+            <Font size="12.0" />
+         </font></Label>
+      <Button fx:id="ficheButton" contentDisplay="TOP" layoutX="351.0" layoutY="11.0" mnemonicParsing="false" onAction="#ficheFacture" prefHeight="36.0" prefWidth="70.0" style="-fx-background-color: ;" styleClass="default" text="Fiche " textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icones/white/Info%20Filled.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button contentDisplay="TOP" layoutX="432.0" layoutY="11.0" mnemonicParsing="false" onAction="#evtFacture" prefHeight="53.0" prefWidth="83.0" style="-fx-background-color: ;" styleClass="default" text="Evénements" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icones/white/Calendar%20Filled.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Pane fx:id="panneau" layoutX="1.0" layoutY="85.0" prefHeight="531.0" prefWidth="1047.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0" />
+      <Button fx:id="reglee" contentDisplay="TOP" layoutX="677.0" layoutY="11.0" mnemonicParsing="false" onAction="#reglee" prefHeight="36.0" prefWidth="70.0" style="-fx-background-color: none;" text="Reglée" textFill="WHITE">
+         <graphic>
+            <ImageView fx:id="imageReglee" fitHeight="25.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icones/white/Checked%20Filled.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button contentDisplay="TOP" layoutX="758.0" layoutY="11.0" mnemonicParsing="false" onAction="#editer" prefHeight="36.0" prefWidth="70.0" style="-fx-background-color: none;" text="Editer" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icones/white/Edit%20File%20Filled.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button contentDisplay="TOP" layoutX="963.0" layoutY="11.0" mnemonicParsing="false" onAction="#print" prefHeight="36.0" prefWidth="70.0" style="-fx-background-color: none;" text="Imprimer" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/Print%20Filled-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+   </children>
+   <stylesheets>
+      <URL value="@../../styles/buttonStyle.css" />
+      <URL value="@../../styles/formulaire.css" />
+   </stylesheets>
+</AnchorPane>

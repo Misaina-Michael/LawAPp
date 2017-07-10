@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="modeles.intervenants.TarifsNS" table="tarifsns" lazy="false">
+        <id name="id" column="idtarifinterv">
+            <generator class="assigned"/>
+        </id>
+        <!--<property name="idtarifinterv" column="idtarifinterv"/>-->
+        <property name="idintervenant" column="idintervenant"/>
+        <property name="idevttarif" column="idevttarif"/>
+        <property name="taux" column="taux"/>
+        <property name="mt" column="mt"/>
+        <property name="libelle" column="libelle"/>
+        <property name="code" column="code"/>
+        <property name="duree" column="duree"/>
+        <property name="mtevt" column="mtevt"/>
+        <property name="idfonction" column="idfonction"/>
+        <property name="libelleTypeTarif" column="libelletypetarif"/>
+        <property name="type" column="type"/>
+            
+       
+
+    </class>
+</hibernate-mapping>

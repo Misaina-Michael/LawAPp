@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="639.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.parametres.ParametresController">
+   <children>
+      <TabPane layoutX="-2.0" prefHeight="639.0" prefWidth="675.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab onSelectionChanged="#procedure" text="Procédures">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="paneProcedure" layoutX="6.0" layoutY="5.0" prefHeight="422.0" prefWidth="666.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab onSelectionChanged="#facture" text="Factures">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="602.0" prefWidth="674.0">
+                     <children>
+                        <Pane fx:id="paneSection" layoutX="7.0" layoutY="6.0" prefHeight="293.0" prefWidth="327.0" />
+                        <Pane fx:id="paneTypeFacture" layoutX="338.0" layoutY="308.0" prefHeight="293.0" prefWidth="327.0" />
+                        <Pane fx:id="panModeFacturation" layoutX="341.0" layoutY="6.0" prefHeight="293.0" prefWidth="327.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Tarifs Normaux">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="tarifnormauxPane" layoutX="2.0" prefHeight="429.0" prefWidth="674.0" style="-fx-background-color: white;">
+                           <children>
+                              <TableView fx:id="intervenantFonctionTableview" layoutX="20.0" layoutY="20.0" prefHeight="358.0" prefWidth="197.0">
+                                <columns>
+                                  <TableColumn fx:id="fonctionColumn" prefWidth="194.0" text="Fonction" />
+                                </columns>
+                              </TableView>
+                              <ListView fx:id="listeTarifNormauxFonctions" layoutX="221.0" layoutY="44.0" prefHeight="335.0" prefWidth="437.0" />
+                              <Button fx:id="ajouterTarif" layoutX="225.0" layoutY="389.0" mnemonicParsing="false" onAction="#ajouterTarifEvent" prefHeight="25.0" prefWidth="82.0" text="Ajouter" />
+                              <Button fx:id="supprimerBoutton" layoutX="323.0" layoutY="389.0" mnemonicParsing="false" onAction="#supprimerBouttonEvent" prefHeight="25.0" prefWidth="82.0" text="Supprimer" />
+                              <Label layoutX="225.0" layoutY="24.0" prefHeight="17.0" prefWidth="430.0" text="Cotation des évènements se rapportant à cette fonction" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Cotation des évènements">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="407.0" prefWidth="670.0">
+                     <children>
+                        <Pane layoutX="5.0" layoutY="28.0" prefHeight="346.0" prefWidth="668.0">
+                           <children>
+                              <TableView fx:id="tableCotation" layoutX="-4.0" layoutY="-1.0" prefHeight="368.0" prefWidth="672.0">
+                                <columns>
+                                  <TableColumn fx:id="typeCotation" prefWidth="86.0" text="Type" />
+                                  <TableColumn fx:id="libelleCotation" prefWidth="256.0" text="Libellé" />
+                                    <TableColumn fx:id="codeCotation" prefWidth="69.0" text="Code" />
+                                    <TableColumn fx:id="dureeCotation" prefWidth="59.0" text="Durée(h)" />
+                                    <TableColumn fx:id="numeroCotation" prefWidth="66.0" text="Numéro" />
+                                    <TableColumn fx:id="montantCotation" prefWidth="134.0" text="Montant (Ar)" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </Pane>
+                        <Button fx:id="ajouterButton" layoutX="145.0" layoutY="402.0" mnemonicParsing="false" onAction="#ajouterButtonAction" prefHeight="25.0" prefWidth="106.0" text="Ajouter " />
+                        <Button fx:id="modifierButton" layoutX="261.0" layoutY="402.0" mnemonicParsing="false" onAction="#modifierAction" prefHeight="25.0" prefWidth="106.0" text="Modifier" />
+                        <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="386.0" text="Cotation des évènements">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="supprimerButton" layoutX="375.0" layoutY="402.0" mnemonicParsing="false" onAction="#supprimerAction" prefHeight="25.0" prefWidth="106.0" text="Supprimer" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab onSelectionChanged="#onSelectTitre" text="Titre">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="panTitre" layoutX="12.0" layoutY="8.0" prefHeight="418.0" prefWidth="317.0" />
+                        <Pane fx:id="panJuridiction" layoutX="346.0" layoutY="9.0" prefHeight="418.0" prefWidth="317.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab onSelectionChanged="#onSelectFonction" text="Fonctions">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="paneFonction" layoutX="6.0" layoutY="5.0" prefHeight="422.0" prefWidth="666.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab onSelectionChanged="#dossier" text="Dossiers">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="panDefDir" layoutX="11.0" layoutY="9.0" prefHeight="345.0" prefWidth="328.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

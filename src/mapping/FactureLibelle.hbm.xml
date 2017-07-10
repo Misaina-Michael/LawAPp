@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="modeles.facturation.FactureLibelle" table="facturelibelle" lazy="false">
+	    <id name="id" column="idfacture" type="integer">
+                
+                <generator class="sequence">  
+                    <param name="sequence">facture_idfacture_seq</param>  
+                </generator>  
+            </id>
+	    <property name="idContact" column="idcontact"/>
+	    <property name="idDossier" column="iddossier"/>
+	    <property name="idTypeFacture" column="idtypefacture"/>
+	    <property name="dateFacture" column="datefacture"/>
+	    <property name="montant" column="montant"/>
+	    <property name="editee" column="editee"/>
+	    <property name="reglee" column="reglee"/>
+	    <property name="editeePar" column="editeepar"/>
+	    <property name="dateEcheance" column="dateecheance"/>
+	    <property name="dateReglement" column="datereglement"/>
+	    <property name="sansSuite" column="sanssuite"/>
+	    <property name="nomClient" column="nomclient"/>
+	    <property name="nomAdvDossier" column="nom"/>
+	    <property name="numeroDossier" column="numerodossier"/>
+	    <property name="typeFacture" column="typefacture"/>
+	    <property name="idIntervenantEdit" column="idintervenantedit"/>
+	    <property name="tva" column="tva"/>
+	    
+	    <property name="idClient" column="idclient"/>
+            <property name="vnomDossier" column="vnomdossier"/>
+	    
+            
+	</class>
+</hibernate-mapping>

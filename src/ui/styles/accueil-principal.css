@@ -1,0 +1,37 @@
+AnchorPane{
+	-fx-background-color:  white;
+	-fx-font-family: Segoe UI;
+}
+.item-menu {
+  /* -fx-background-color:#0078D7; */
+  -fx-cursor:hand;
+  -fx-background-radius: 0px;
+  -fx-text-fill:white;
+  -fx-font-size:12px;
+}
+.menu .label{
+    -fx-text-fill: white;
+}
+
+.menu-item .label{
+    -fx-text-fill: black;
+}
+
+
+.item-menu:hover {
+  -fx-background-color:#CCE6F9;
+  -fx-background-insets:0 0 -1 0, 0, 1, 2;
+  -fx-background-radius: 0px;
+  -fx-text-fill:white;
+}
+.item-menu-active {
+  -fx-background-color:#B4DAF5;
+}
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+    -fx-background-color: white;
+}
+.table-view .column-header .label{
+    -fx-alignment: center-left;
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="modeles.parametres.TypeFacture" table="typefacture" lazy="false">
+	    <id name="id" column="idtypefacture" type="integer">
+                
+                <generator class="sequence">  
+                    <param name="sequence">typefacture_idtypefacture_seq</param>  
+                </generator>  
+            </id>
+	    <property name="libelle" column="libelle"/>
+	    <property name="modeleWord" column="modeleword"/>
+            
+	</class>
+</hibernate-mapping>

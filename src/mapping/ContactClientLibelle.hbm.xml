@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="modeles.contact.ContactClientLibelle" table="contactclientlibelle" lazy="false">
+	    <id name="id" column="idcontactcl" type="integer">
+                
+                <generator class="sequence">  
+                    <param name="sequence">contactclient_idcontactcl_seq</param>  
+                </generator>  
+            </id>
+	    <property name="idContact" column="idcontact"/>
+	    <property name="idClient" column="idclient"/>
+            <property name="nom" column="nom"/>
+            <property name="idTitre" column="idtitre"/>
+            <property name="titreContact" column="titrecontact"/>
+            <property name="prenom" column="prenom"/>
+            <property name="fonction" column="fonction"/>
+            <property name="adresse" column="adresse"/>
+            <property name="cp" column="codepostal"/>
+            <property name="ville" column="ville"/>
+            <property name="pays" column="pays"/>
+            <property name="standard" column="standard"/>
+            <property name="bureau" column="bureau"/>
+            <property name="fax" column="fax"/>
+            <property name="email" column="email"/>
+            <property name="telex" column="telex"/>
+            <property name="web" column="web"/>
+            <property name="mobile" column="mobile"/> 
+            <property name="autre" column="autre"/>
+            <property name="enSommeil" column="ensommeil"/>
+            <property name="dateCreation" column="datecreation"/>
+            <property name="dateModification" column="datemodification"/>
+	    
+	</class>
+</hibernate-mapping>

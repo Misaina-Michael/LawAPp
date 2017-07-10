@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.Insets?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="631.0" prefWidth="1153.0" style="-fx-background-color: white;" stylesheets="@../../styles/formulaire.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.contact.PanneauPrincipaleContactController">
+   <children>
+      <Pane fx:id="panneauPrincipalContact" layoutX="8.0" layoutY="48.0" prefHeight="572.0" prefWidth="391.0" />
+      <Button fx:id="nouveauContactButton" contentDisplay="GRAPHIC_ONLY" layoutX="420.0" layoutY="7.0" mnemonicParsing="false" onAction="#newclicked" prefHeight="35.0" prefWidth="42.0" stylesheets="@../../styles/modifier.css">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icones/white/Add%20List%20Filled.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <TableView fx:id="listeContacts" layoutX="420.0" layoutY="46.0" prefHeight="591.0" prefWidth="749.0">
+         <columns>
+            <TableColumn fx:id="nom" prefWidth="172.0" text="Nom" />
+            <TableColumn fx:id="prenom" prefWidth="114.0" text="Prenom" />
+            <TableColumn fx:id="adresse" prefWidth="152.0" text="Adresse" />
+            <TableColumn fx:id="pays" prefWidth="139.0" text="Pays" />
+            <TableColumn fx:id="ville" prefWidth="220.0" text="Ville" />
+         </columns>
+      </TableView>
+      <Separator layoutX="407.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="623.0" prefWidth="4.0" />
+      <Separator layoutX="10.0" layoutY="36.0" prefHeight="10.0" prefWidth="391.0" />
+      <Label layoutX="14.0" layoutY="2.0" prefHeight="35.0" prefWidth="340.0" text="Contact Registration Details" textFill="#5e5757">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

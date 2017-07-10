@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="498.0" prefWidth="1040.0" style="-fx-background-color: white;" stylesheets="@../../styles/formulaire.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.facturation.EvtFactureController">
+   <children>
+      <TableView fx:id="tabEvt" layoutX="7.0" layoutY="55.0" prefHeight="376.0" prefWidth="1029.0">
+        <columns>
+          <TableColumn fx:id="colDate" prefWidth="108.0" text="Date" />
+          <TableColumn fx:id="colInterv" prefWidth="285.0" text="Intervenant" />
+            <TableColumn fx:id="colEvt" prefWidth="393.0" text="Evénement" />
+            <TableColumn fx:id="colDuree" prefWidth="68.0" text="Durée" />
+            <TableColumn fx:id="colMontant" prefWidth="166.0" text="Montant (Ar)" />
+        </columns>
+      </TableView>
+      <Label layoutX="778.0" layoutY="452.0" text="Total">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="total" alignment="CENTER_RIGHT" layoutX="867.0" layoutY="452.0" prefHeight="16.0" prefWidth="169.0" text="Label" textAlignment="RIGHT">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

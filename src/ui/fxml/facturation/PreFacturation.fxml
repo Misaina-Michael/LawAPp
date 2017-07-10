@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="616.0" prefWidth="859.0" style="-fx-background-color: white;" stylesheets="@../../styles/formulaire.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.facturation.PreFacturationController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Pré-facturation">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <GridPane hgap="10.0" layoutX="14.0" layoutY="50.0" prefHeight="60.0" prefWidth="750.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="99.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="331.0" minWidth="10.0" prefWidth="111.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="397.0" minWidth="10.0" prefWidth="92.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="404.0" minWidth="10.0" prefWidth="368.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="N° de la facture" />
+            <Label text="N° du dossier" GridPane.rowIndex="1" />
+            <Label text="Nom du dossier" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label text="Date de la facture" GridPane.columnIndex="2" />
+            <TextField fx:id="nofacture" disable="true" GridPane.columnIndex="1" />
+            <TextField fx:id="nodossier" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="nomdossier" disable="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <DatePicker fx:id="datefact" GridPane.columnIndex="3" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tabEvt" layoutX="327.0" layoutY="187.0" prefHeight="332.0" prefWidth="518.0">
+        <columns>
+          <TableColumn fx:id="colDaty" prefWidth="93.0" text="Date" />
+          <TableColumn fx:id="colEvt" prefWidth="294.0" text="Tache" />
+            <TableColumn fx:id="colMt" prefWidth="130.0" text="Montant (Ar)" />
+        </columns>
+      </TableView>
+      <Button layoutX="327.0" layoutY="525.0" mnemonicParsing="false" onAction="#enleverEvt" prefWidth="100.0" text="Enlever" />
+      <Button layoutX="745.0" layoutY="578.0" mnemonicParsing="false" onAction="#genererFacture" prefWidth="100.0" styleClass="button-ajouter" text="Valider" />
+      <Button layoutX="637.0" layoutY="578.0" mnemonicParsing="false" onAction="#annuler" prefWidth="100.0" styleClass="button-supprimer" text="Annuler" />
+      <Label layoutX="14.0" layoutY="151.0" text="Montants">
+         <font>
+            <Font size="12.0" />
+         </font></Label>
+      <Label layoutX="327.0" layoutY="151.0" text="Evénements">
+         <font>
+            <Font size="12.0" />
+         </font></Label>
+      <GridPane hgap="5.0" layoutX="14.0" layoutY="459.0" prefHeight="94.0" prefWidth="273.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Total HT" />
+            <Label text="TVA" GridPane.rowIndex="1" />
+            <TextField fx:id="tva" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="77.0" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <TextField fx:id="totalht" alignment="CENTER_RIGHT" disable="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+            <TextField fx:id="mttva" alignment="CENTER_RIGHT" disable="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <TextField fx:id="mtttc" alignment="CENTER_RIGHT" disable="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <Label text="Total TTC" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane fx:id="gridMts" hgap="5.0" layoutX="14.0" layoutY="187.0" prefHeight="221.0" prefWidth="273.0" vgap="5.0" AnchorPane.topAnchor="187.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="122.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="146.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Separator layoutX="14.0" layoutY="449.0" prefHeight="3.0" prefWidth="273.0" />
+      <Separator layoutX="306.0" layoutY="151.0" orientation="VERTICAL" prefHeight="407.0" prefWidth="5.0" />
+      <Separator layoutX="14.0" layoutY="131.0" prefHeight="3.0" prefWidth="829.0" />
+   </children>
+</AnchorPane>

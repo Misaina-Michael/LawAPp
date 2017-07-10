@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="520.0" prefWidth="915.0" style="-fx-background-color: white; -fx-background-radius: 2px;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.client.ContactClientController">
+   <children>
+      <ListView fx:id="listViewContact" layoutX="14.0" layoutY="47.0" prefHeight="427.0" prefWidth="297.0" />
+      <Pane fx:id="paneFicheContact" layoutX="325.0" layoutY="46.0" prefHeight="427.0" prefWidth="507.0">
+         <children>
+            <Text fx:id="textInfo" layoutX="4.0" layoutY="12.0" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="13.0" />
+               </font></Text>
+         </children>
+      </Pane>
+      <Button layoutX="14.0" layoutY="484.0" mnemonicParsing="false" onAction="#lierContact" prefHeight="30.0" prefWidth="143.0" text="Lier un contact" />
+      <Button layoutX="168.0" layoutY="484.0" mnemonicParsing="false" onAction="#enleverContact" prefHeight="30.0" prefWidth="143.0" text="Enlever" />
+      <Label layoutX="14.0" layoutY="16.0" text="Contacts">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

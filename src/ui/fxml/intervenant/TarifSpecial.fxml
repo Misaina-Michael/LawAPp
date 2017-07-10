@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="529.0" prefWidth="843.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.intervenant.TarifSpecialController">
+   <children>
+      <Button layoutX="11.0" layoutY="5.0" mnemonicParsing="false" onAction="#addTarifSpecial" prefHeight="25.0" prefWidth="110.0" text="Ajouter" />
+      <Button layoutX="134.0" layoutY="5.0" mnemonicParsing="false" onAction="#updatetarifbutton" prefHeight="25.0" prefWidth="127.0" text="Modifier la ligne" />
+      <Button layoutX="278.0" layoutY="5.0" mnemonicParsing="false" onAction="#deleteTarif" prefHeight="25.0" prefWidth="127.0" text="Supprimer" visible="false" />
+      <TableView fx:id="tarifSpecialTableView" layoutX="5.0" layoutY="34.0" prefHeight="492.0" prefWidth="833.0">
+         <columns>
+            <TableColumn fx:id="type" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="libelle" prefWidth="135.0" text="Libelle" />
+            <TableColumn fx:id="duree" minWidth="0.0" prefWidth="156.0" text="Durée" />
+            <TableColumn fx:id="base" minWidth="0.0" prefWidth="165.0" text="Base (Ar)" />
+            <TableColumn fx:id="taux" minWidth="0.0" prefWidth="127.0" text="Taux(%)" />
+            <TableColumn fx:id="montant" minWidth="0.0" prefWidth="175.0" text="Montant(Ar)" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

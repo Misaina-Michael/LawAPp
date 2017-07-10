@@ -1,0 +1,19 @@
+AnchorPane{
+	-fx-background-color:  #f5f6f7;
+}
+.default {
+  -fx-background-color:transparent;
+  
+}
+
+
+.default:hover {
+  -fx-background-color:#CE2824;
+  -fx-background-insets:0 0 -1 0, 0, 1, 2;
+  -fx-background-radius: 2px;
+  -fx-text-fill:white;
+}
+.default-active {
+  -fx-background-color:#CE2824;
+  -fx-text-fill:white;
+}

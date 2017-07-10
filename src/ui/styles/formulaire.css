@@ -1,0 +1,47 @@
+.text-field{
+     
+    
+   -fx-background-radius:  0px;
+   -fx-background-color: white;
+   -fx-border-width: 1px;
+   -fx-border-color: #d8d8d8;
+}
+.text-area{
+  -fx-background-radius:  0px;
+  -fx-background-color: white;
+   -fx-border-width: 1px;
+   -fx-border-color: #d8d8d8;
+  
+}
+.text-area:focused{
+  -fx-background-color: -fx-focus-color,-fx-box-border,-fx-control-inner-background;
+  -fx-background-insets: -1.4, 0, 1;
+  -fx-background-radius: 1.4, 0, 0;
+}
+.text-field:focused{
+  -fx-background-color: -fx-focus-color,-fx-box-border,-fx-control-inner-background;
+  -fx-background-insets: -1.4, 0, 1;
+  -fx-background-radius: 1.4, 0, 0;
+}
+    
+.combo-box{
+  -fx-background-radius:  0px;
+  -fx-background-color: white;
+   -fx-border-width: 1px;
+   -fx-border-color: #d8d8d8;
+}
+.button-ajouter{
+    -fx-background-color: #3d8931;
+    -fx-text-fill: whitesmoke;
+    -fx-background-radius:  0px;      
+}   
+.button-modifier{
+   -fx-background-color: #3b5998; 
+  -fx-text-fill: white;
+  -fx-background-radius:  0px;
+}
+.button-supprimer{
+   -fx-background-color: #c22727; 
+  -fx-text-fill: white;
+  -fx-background-radius:  0px;
+}

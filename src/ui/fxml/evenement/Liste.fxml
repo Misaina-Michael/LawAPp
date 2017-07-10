@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import jfxtras.labs.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import jfxtras.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import ui.controllers.evenement.*?>
+
+<AnchorPane id="AnchorPane" fx:id="parent" prefHeight="577.0" prefWidth="1155.0" stylesheets="@../../styles/formulaire.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.evenement.ListeController">
+   <children>
+      <TableView fx:id="liste" layoutX="9.0" layoutY="164.0" onMousePressed="#itemSelected" prefHeight="324.0" prefWidth="972.0">
+        <columns>
+            <TableColumn fx:id="colSelect" prefWidth="22.0" />
+          <TableColumn fx:id="colDate" prefWidth="96.0" sortable="false" text="Date" />
+          <TableColumn fx:id="colInterv" prefWidth="212.0" sortable="false" text="Intervenant" />
+            <TableColumn fx:id="colDemand" prefWidth="199.0" sortable="false" text="Observateur" />
+            <TableColumn fx:id="colEvt" prefWidth="247.0" sortable="false" text="Tâche" />
+            <TableColumn fx:id="colDuree" minWidth="0.0" prefWidth="61.0" sortable="false" text="Durée" />
+            <TableColumn fx:id="colMt" minWidth="0.0" prefWidth="134.0" sortable="false" text="Montant (Ar)" />
+        </columns>
+      </TableView>
+      <GridPane fx:id="gridTarif" layoutX="9.0" layoutY="497.0" prefHeight="72.0" prefWidth="972.0" style="-fx-background-radius: 2px; -fx-background-color: white;">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Pane fx:id="paneChrono" layoutX="987.0" layoutY="187.0" prefHeight="72.0" prefWidth="163.0" style="-fx-background-radius: 2px; -fx-background-color: white;">
+         <children>
+            <Label alignment="CENTER" layoutX="1.0" layoutY="6.0" />
+         </children>
+      </Pane>
+      <GridPane fx:id="paneJour" layoutX="987.0" layoutY="259.0" prefHeight="56.0" prefWidth="163.0" style="-fx-background-radius: 2px; -fx-background-color: white;" visible="false">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Aujourd'hui">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="dureeDuJour" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+         </children>
+      </GridPane>
+      <Pane layoutX="9.0" layoutY="5.0" prefHeight="151.0" prefWidth="972.0" style="-fx-background-color: white; -fx-background-radius: 2px;">
+         <children>
+            <GridPane hgap="10.0" layoutX="8.0" layoutY="44.0" prefHeight="104.0" prefWidth="956.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="50.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="130.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.0" minWidth="10.0" prefWidth="220.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="112.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="200.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="De" />
+                  <DatePicker fx:id="dateDe" prefHeight="24.0" prefWidth="202.0" GridPane.columnIndex="1" />
+                  <DatePicker fx:id="dateA" prefHeight="24.0" prefWidth="204.0" GridPane.columnIndex="3" />
+                  <Label text="à" GridPane.columnIndex="2" />
+                  <Label text="Tarif" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="tarifSearch" prefWidth="204.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="evtSearch" prefHeight="24.0" prefWidth="204.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Label text="Evénement" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label text="Intervenant" GridPane.columnIndex="4" />
+                  <ComboBox fx:id="intervSearch" prefWidth="204.0" GridPane.columnIndex="5" />
+                  <Button mnemonicParsing="false" onAction="#rechercher" prefWidth="100.0" styleClass="button-modifier" text="Rechercher" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/icones/white/Search%20Filled.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label text="Facturée" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="facturee" prefWidth="204.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <Label layoutX="8.0" layoutY="6.0" text="Liste des tâches " textFill="#dd423d">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="987.0" layoutY="432.0" prefHeight="56.0" prefWidth="163.0" style="-fx-background-color: white; -fx-background-radius: 2px;">
+         <children>
+            <Button fx:id="ajouter" contentDisplay="GRAPHIC_ONLY" layoutX="8.0" layoutY="12.0" mnemonicParsing="false" onAction="#create" prefHeight="33.0" prefWidth="42.0" style="-fx-border-color: ;" text="Nouveau">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/icones/blue/Add%20Filled.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="61.0" layoutY="12.0" mnemonicParsing="false" onAction="#modifierEvt" prefHeight="33.0" prefWidth="42.0" style="-fx-border-color: ;" text="Button">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/icones/blue/Edit%20Filled.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="113.0" layoutY="12.0" mnemonicParsing="false" onAction="#delete" prefHeight="33.0" prefWidth="42.0" style="-fx-border-color: ;" text="Button">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/icones/red/Delete%20Filled_2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Label layoutX="1000.0" layoutY="164.0" text="Votre temps de travail">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Pane layoutX="987.0" layoutY="369.0" prefHeight="56.0" prefWidth="163.0" style="-fx-background-color: white; -fx-background-radius: 2px;">
+         <children>
+            <Button contentDisplay="TEXT_ONLY" layoutX="8.0" layoutY="12.0" mnemonicParsing="false" onAction="#print" prefHeight="33.0" prefWidth="148.0" style="-fx-border-color: ;" text="Imprimer ">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/printer-1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="987.0" layoutY="497.0" prefHeight="72.0" prefWidth="163.0" style="-fx-background-color: white; -fx-background-radius: 2px;">
+         <children>
+            <Button layoutX="9.0" layoutY="8.0" mnemonicParsing="false" onAction="#genererFacture" prefHeight="56.0" prefWidth="148.0" text="Générer la facture">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/icones/red/Invoice%20Filled.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

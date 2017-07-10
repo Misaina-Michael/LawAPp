@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="modeles.parametres.Fonction" table="fonction" lazy="false">
+	    <id name="id" column="idfonction" type="integer">
+                
+                <generator class="sequence">  
+                    <param name="sequence">fonction_idfonction_seq</param>  
+                </generator>  
+            </id>
+	    <property name="libelle" column="libelle"/>
+            <property name="intervenant" column="intervenant"/>
+            <property name="contact" column="contact"/>
+            <property name="client" column="client"/>
+            <property name="dossier" column="dossier"/>
+            <property name="factures" column="factures"/>
+            <property name="planning" column="planning"/>
+            <property name="feuilledeTemps" column="feuilledetemps"/>
+            <property name="utilisateur" column="utilisateur"/>
+	    
+            
+	</class>
+</hibernate-mapping>

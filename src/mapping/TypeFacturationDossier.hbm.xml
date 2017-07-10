@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="modeles.parametres.TypeFacturationDossier" table="typefacturationdossier" lazy="false">
+	    <id name="id" column="idtypefacturationdossier" type="integer">
+                
+                <generator class="sequence">  
+                    <param name="sequence">typefacturationdossier_idtypefacturationdossier_seq</param>  
+                </generator>  
+            </id>
+	    
+            <property name="tauxTva" column="tauxtva"/>
+            <property name="echeance" column="echeance"/>
+            <property name="idTypeFacture" column="idtypefacture"/>
+            <property name="idDossier" column="iddossier"/>
+     
+            <property name="compteComptable" column="comptecomptable"/>
+            <property name="compteTiers" column="comptetiers"/>
+            <property name="categorieComptable" column="categoriecomptable"/>
+            <property name="langue" column="langue"/>
+            <property name="typeFacture" column="typefacture"/>
+            <property name="periodicite" column="periodicite"/>
+            <property name="mtForfait" column="mtforfaitmode"/>
+            <property name="tauxMode" column="tauxmode"/>
+            <property name="idMode" column="idmode"/>
+
+	</class>
+</hibernate-mapping>

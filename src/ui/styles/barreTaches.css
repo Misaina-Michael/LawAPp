@@ -1,0 +1,14 @@
+.button-item{
+  -fx-background-color: inherit; 
+  -fx-text-fill: white;
+  -fx-background-radius:  0px;
+}
+.button-item:hover {
+
+  /*-fx-border-width:1px;
+  -fx-border-color:whitesmoke   ;*/
+  -fx-background-color:#CE2824;
+  -fx-background-insets:0 0 -1 0, 0, 1, 2;
+  -fx-background-radius: 2px;
+  -fx-text-fill:white;
+}

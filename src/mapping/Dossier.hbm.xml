@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="modeles.dossiers.Dossier" table="dossier" lazy="false">
+<!--	    <id name="id" column="iddossier" type="integer">
+                
+                <generator class="sequence">  
+                    <param name="sequence">dossier_iddossier_seq</param>  
+                </generator>  
+            </id>-->
+            <id name="id" column="iddossier">
+                    <generator class="assigned"/>
+            </id>
+	    <property name="nomAdversaire" column="nom"/>
+            <property name="lieu" column="lieu"/>
+            <property name="dateOuverture" column="dateouverture"/>
+            <property name="noProcedure" column="noprocedure"/>
+            <property name="region" column="region"/>
+            <property name="enCours" column="encours"/>
+            <property name="commentaire" column="commentaire"/>
+            <property name="idGestionnaire" column="idgestionnaire"/>
+            <property name="numeroDossier" column="numerodossier"/>
+            <property name="idClient" column="idclient"/>
+            <property name="idJuridiction" column="idjur"/>
+            <property name="idNature" column="idnature"/>
+            <property name="vnomDossier" column="vnomdossier"/>
+            <property name="faits" column="faits"/>
+            
+	</class>
+</hibernate-mapping>
