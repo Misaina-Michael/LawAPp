@@ -47,6 +47,7 @@ public class FaitsController implements Initializable {
             dossier.setId(dossierLib.getId());
             dossier = (Dossier)bs.findById(dossier);
             dossier.setFaits(faits.getText());
+            dossierLib.setFaits(faits.getText());
             bs.update(dossier);
         } catch (Exception ex) {
             ex.printStackTrace();
