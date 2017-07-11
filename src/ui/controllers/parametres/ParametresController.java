@@ -42,6 +42,7 @@ import modeles.parametres.DefaultDir;
 import modeles.parametres.Fonction;
 import modeles.parametres.Juridiction;
 import modeles.parametres.ModeFacturation;
+import modeles.parametres.Nature;
 import modeles.parametres.Titre;
 import modeles.parametres.TypeFacture;
 import modeles.parametres.TypeProcedure;
@@ -80,6 +81,9 @@ public class ParametresController implements Initializable {
     private Pane paneSection;
     @FXML
     private Pane panModeFacturation;
+
+    @FXML
+    private Pane paneNature;
     @FXML
     private TableView intervenantFonctionTableview;
     @FXML
@@ -388,6 +392,20 @@ public class ParametresController implements Initializable {
             listeCtrl.getTableView().setPrefWidth(300);
             listeCtrl.init(mod);
             panDefDir.getChildren().add(root);
+
+            FXMLLoader loader1 = new FXMLLoader(getClass().getResource("/ui/fxml/crud/Liste.fxml"));
+            Parent root1 = (Pane) loader1.load();
+            ListeController listeNatureCtrl = loader1.<ListeController>getController();
+            Nature nature = new Nature();
+            nature.setId(1);
+            nature.initValues();
+            listeNatureCtrl.setFieldsToShow(new String[]{"libelle"});
+            listeNatureCtrl.setTitreLabel("Nature");
+            listeNatureCtrl.setModele(nature);
+            listeNatureCtrl.getTableView().setPrefWidth(300);
+            listeNatureCtrl.init(nature);
+//            listeNatureCtrl.disableActions();
+            paneNature.getChildren().add(root1);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -410,7 +428,7 @@ public class ParametresController implements Initializable {
             mod.setFeuilledeTemps("aucun");
             mod.setPlanning("aucun");
             mod.setUtilisateur("aucun");
-            
+
             listeCtrl.setFieldsToShow(new String[]{"libelle"});
             listeCtrl.setTitreLabel("Fonction");
             listeCtrl.setModele(mod);
@@ -469,7 +487,7 @@ public class ParametresController implements Initializable {
             listeModeFactCtrl.setModele(modFact);
             listeModeFactCtrl.getTableView().setPrefWidth(300);
             listeModeFactCtrl.init(modFact);
-            
+
             panModeFacturation.getChildren().add(root2);
         } catch (Exception ex) {
             ex.printStackTrace();

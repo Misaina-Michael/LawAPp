@@ -1,0 +1,14 @@
+#build
+build/
+dist/
+
+#libs
+lib/
+
+#project
+nbproject/
+
+build.xml
+manifest.mf
+*.properties
+hibernate.cfg.xml
